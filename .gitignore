@@ -30,7 +30,6 @@ env/
 .venv
 
 # Output directories
-output/
 results/
 data/
 

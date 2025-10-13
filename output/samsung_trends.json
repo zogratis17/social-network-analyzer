@@ -1,0 +1,152 @@
+[
+  [
+    "samsung",
+    {
+      "recent": 0,
+      "older": 3,
+      "total": 3,
+      "velocity": 0.25,
+      "importance": 3.38
+    }
+  ],
+  [
+    "moderation bot",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "link analysis",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "content moderation",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "apple pay",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "nfc payments",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "mobile payment",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "samsung pay",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "faceid",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "swiftkey",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "user interface",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "gesture control",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "keyboard behavior",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "app management",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ],
+  [
+    "thoughts",
+    {
+      "recent": 0,
+      "older": 1,
+      "total": 1,
+      "velocity": 0.5,
+      "importance": 1.25
+    }
+  ]
+]
