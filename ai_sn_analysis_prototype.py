@@ -9,9 +9,19 @@ from collections import defaultdict, Counter
 from datetime import datetime, timezone
 from typing import Dict, List, Tuple, Set, Optional, Any, Union
 import warnings
+
+# Suppress warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
+
+# Suppress gRPC/ALTS warnings from Google libraries
+os.environ['GRPC_VERBOSITY'] = 'ERROR'
+os.environ['GLOG_minloglevel'] = '2'
+
 import logging
 logging.getLogger("plotly").setLevel(logging.CRITICAL)
+logging.getLogger("google").setLevel(logging.ERROR)
+logging.getLogger("grpc").setLevel(logging.ERROR)
 
 
 # Load environment variables from .env file
@@ -60,10 +70,13 @@ class GeminiClient:
     Wrapper for Google Gemini API calls using the official google-generativeai SDK.
     If GEMINI_API_KEY is provided, uses Gemini for advanced content analysis.
     Falls back to local analysis if API key is not provided or API calls fail.
+    
+    Features caching to avoid redundant API calls.
     """
     def __init__(self, api_key=None):
         self.api_key = api_key
         self.model = None
+        self._cache = {}  # Cache for analyzed texts
         
         if self.api_key:
             try:
@@ -93,10 +106,15 @@ class GeminiClient:
         Returns:
             dict with keys: sentiment, score, topics, viral_score
             
-        Note: Includes defensive parsing for API responses.
+        Note: Includes defensive parsing for API responses and caching.
         """
         if not text or not text.strip():
             return {'sentiment': 'neutral', 'score': 0.5, 'topics': [], 'viral_score': 0.0}
+        
+        # Check cache first
+        text_hash = hash(text[:500])  # Hash first 500 chars for cache key
+        if text_hash in self._cache:
+            return self._cache[text_hash]
 
         if self.model:
             try:
@@ -169,12 +187,16 @@ Example bad topics: ["python", "code", "help", "question", "programming", "post"
                 viral_score = float(data.get('viral_score', 0.0))
                 viral_score = max(0.0, min(1.0, viral_score))  # Clamp to [0, 1]
                 
-                return {
+                result = {
                     'sentiment': sentiment.lower(),
                     'score': score,
                     'topics': filtered_topics,
                     'viral_score': viral_score
                 }
+                
+                # Cache the result
+                self._cache[text_hash] = result
+                return result
                 
             except json.JSONDecodeError as e:
                 logger.warning('Failed to parse Gemini JSON response: %s - Response: %s', e, result_text[:200])
@@ -182,7 +204,9 @@ Example bad topics: ["python", "code", "help", "question", "programming", "post"
                 logger.warning('Gemini API call failed: %s - falling back to local analyzer', e)
 
         # Fallback: simple rule-based sentiment + topic extraction
-        return simple_local_text_analysis(text)
+        result = simple_local_text_analysis(text)
+        self._cache[text_hash] = result
+        return result
 
 
 # ----- Simple local text analysis fallback -----
@@ -312,47 +336,74 @@ class RedditCollector:
         Returns list of post dicts with comments nested.
         """
         logger.info('Fetching up to %s posts from r/%s', limit, subreddit_name)
-        subreddit = self.reddit.subreddit(subreddit_name)
+        try:
+            subreddit = self.reddit.subreddit(subreddit_name)
+        except Exception as e:
+            logger.error(f'Failed to access r/{subreddit_name}: {e}')
+            return []
+        
         posts = []
         count = 0
+        
         for submission in subreddit.top(time_filter=time_filter, limit=limit):
-            retry_delay = self.rate_sleep
-            for attempt in range(self.max_retries):
-                try:
-                    submission.comments.replace_more(limit=None)
-                    break  # Success, exit retry loop
-                except Exception as e:
-                    if attempt < self.max_retries - 1:
-                        logger.warning(f'Rate limit or error on post {submission.id}, retrying in {retry_delay}s...')
-                        time.sleep(retry_delay)
-                        retry_delay *= 2  # Exponential backoff
-                    else:
-                        logger.error(f'Failed to fetch comments for post {submission.id} after {self.max_retries} attempts')
-                        # Continue without comments for this post
-            post = {
-                'id': submission.id,
-                'created_utc': submission.created_utc,
-                'title': submission.title,
-                'selftext': submission.selftext,
-                'author': getattr(submission.author, 'name', None),
-                'score': submission.score,
-                'num_comments': submission.num_comments,
-                'comments': []
-            }
-            for c in submission.comments.list():
-                post['comments'].append({
-                    'id': c.id,
-                    'parent_id': c.parent_id,
-                    'created_utc': c.created_utc,
-                    'body': getattr(c, 'body', ''),
-                    'author': getattr(c.author, 'name', None),
-                    'score': getattr(c, 'score', 0)
-                })
-            posts.append(post)
-            count += 1
-            if count % 50 == 0:
-                logger.info('Fetched %s posts...', count)
-            time.sleep(self.rate_sleep)
+            try:
+                # Fetch comments with retry logic
+                retry_delay = self.rate_sleep
+                comments_loaded = False
+                
+                for attempt in range(self.max_retries):
+                    try:
+                        submission.comments.replace_more(limit=0)  # limit=0 to avoid too many requests
+                        comments_loaded = True
+                        break  # Success, exit retry loop
+                    except Exception as e:
+                        if attempt < self.max_retries - 1:
+                            logger.warning(f'Retry {attempt+1}/{self.max_retries} for post {submission.id}: {str(e)[:50]}')
+                            time.sleep(retry_delay)
+                            retry_delay *= 2  # Exponential backoff
+                        else:
+                            logger.error(f'Failed to fetch comments for post {submission.id} after {self.max_retries} attempts')
+                
+                # Build post data
+                post = {
+                    'id': submission.id,
+                    'created_utc': submission.created_utc,
+                    'title': submission.title,
+                    'selftext': submission.selftext,
+                    'author': getattr(submission.author, 'name', None),
+                    'score': submission.score,
+                    'num_comments': submission.num_comments,
+                    'comments': []
+                }
+                
+                # Add comments if loaded successfully
+                if comments_loaded:
+                    for c in submission.comments.list():
+                        try:
+                            post['comments'].append({
+                                'id': c.id,
+                                'parent_id': c.parent_id,
+                                'created_utc': c.created_utc,
+                                'body': getattr(c, 'body', ''),
+                                'author': getattr(c.author, 'name', None),
+                                'score': getattr(c, 'score', 0)
+                            })
+                        except Exception as e:
+                            # Skip malformed comments
+                            continue
+                
+                posts.append(post)
+                count += 1
+                
+                if count % 10 == 0:
+                    logger.info('Fetched %s/%s posts...', count, limit)
+                
+                time.sleep(self.rate_sleep)
+                
+            except Exception as e:
+                logger.warning(f'Skipping post due to error: {str(e)[:100]}')
+                continue
+        
         logger.info('Finished fetching %s posts', len(posts))
         return posts
 
@@ -568,13 +619,9 @@ def compute_pagerank(G, damping=0.85, max_iter=100, tol=1e-06):
         logger.warning('NetworkX PageRank failed: %s - trying personalization-less fallback', e)
         pr = nx.pagerank(G.to_undirected(), alpha=damping)
     nx.set_node_attributes(G, pr, 'pagerank')
-    # centrality metrics
+    # Store degree centrality
     degree = dict(G.degree())
-    bet = nx.betweenness_centrality(G)
-    clo = nx.closeness_centrality(G)
     nx.set_node_attributes(G, degree, 'degree')
-    nx.set_node_attributes(G, bet, 'betweenness')
-    nx.set_node_attributes(G, clo, 'closeness')
     logger.info('PageRank computed for %s nodes', len(pr))
     return pr
 
@@ -812,9 +859,13 @@ def visualize_graph_plotly(G, community_attr='community_greedy', size_attr='page
         edge_x.extend([x0, x1, None])
         edge_y.extend([y0, y1, None])
 
-    edge_trace = go.Scatter(x=edge_x, y=edge_y, mode='lines', line=dict(width=0.5), hoverinfo='none')
+    edge_trace = go.Scatter(x=edge_x, y=edge_y, mode='lines', line=dict(width=0.5, color='#888'), hoverinfo='none')
     node_trace = go.Scatter(x=node_x, y=node_y, mode='markers', hoverinfo='text', text=node_text,
-                            marker=dict(showscale=True, color=colors, size=sizes, colorbar=dict(title='Community')))
+                            marker=dict(showscale=True, 
+                                      color=colors, 
+                                      size=sizes, 
+                                      colorscale='Plasma',  # Vibrant purple->pink->orange->yellow
+                                      colorbar=dict(title='Community')))
     fig = go.Figure(data=[edge_trace, node_trace], layout=go.Layout(title='Social Network Graph', hovermode='closest'))
     if out_html:
         fig.write_html(out_html)
@@ -943,6 +994,7 @@ if __name__ == '__main__':
         logger.error('REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET must be set in environment variables')
         sys.exit(1)
     outputs = run_pipeline(args.subreddit, args.posts, args.outdir, gemini_api_key=args.gemini_key, time_filter=args.time_filter)
+
 
 
 # ----- End of file -----

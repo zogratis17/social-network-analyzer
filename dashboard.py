@@ -3,17 +3,39 @@ Intelligent Social Network Analysis Dashboard
 A comprehensive platform for network analysis with AI-powered insights
 """
 
+import os
+import sys
+import warnings
+
+# Suppress warnings before other imports
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=FutureWarning)
+os.environ['GRPC_VERBOSITY'] = 'ERROR'
+os.environ['GLOG_minloglevel'] = '2'
+
 import streamlit as st
 import pandas as pd
 import json
-import os
 import plotly.graph_objects as go
 import plotly.express as px
 import networkx as nx
 from datetime import datetime
-import sys
 import time
 from pathlib import Path
+import logging
+
+# Suppress library logging
+logging.getLogger("plotly").setLevel(logging.CRITICAL)
+logging.getLogger("google").setLevel(logging.ERROR)
+logging.getLogger("grpc").setLevel(logging.ERROR)
+logging.getLogger("absl").setLevel(logging.ERROR)
+
+# Load environment variables
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 # Import the analysis module
 from ai_sn_analysis_prototype import (
@@ -22,7 +44,7 @@ from ai_sn_analysis_prototype import (
     GeminiClient,
     detect_communities_union_find,
     detect_communities_louvain,
-    compute_influence_pagerank,
+    compute_pagerank,
     compute_mst,
     detect_trends,
     visualize_graph_plotly
@@ -103,6 +125,18 @@ with st.sidebar:
             help="Filter posts by time period"
         )
         
+        # AI Analysis toggle
+        use_gemini = st.checkbox(
+            "🤖 Use Gemini AI for content analysis",
+            value=False,
+            help="⚠️ Slower but more accurate. Unchecked = fast local analysis"
+        )
+        
+        if use_gemini:
+            st.warning("⏱️ AI analysis adds ~2-3 seconds per post. For 50 posts: ~2-3 minutes extra.")
+        else:
+            st.info("⚡ Using fast local analysis (instant, good enough for most cases)")
+        
         # API credentials check
         st.markdown("---")
         st.markdown("### 🔑 API Status")
@@ -181,6 +215,266 @@ with st.sidebar:
     - Gemini AI (Content)
     """)
 
+# ========== REAL-TIME ANALYSIS EXECUTION ==========
+def run_analysis(subreddit, num_posts, time_filter, output_dir, use_gemini_ai=False):
+    """
+    Run complete social network analysis pipeline with progress tracking.
+    
+    Args:
+        use_gemini_ai: If True, use Gemini API for content analysis (slower but better).
+                       If False, use local analysis (much faster).
+    """
+    try:
+        # Create output directory
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Initialize progress tracking
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        
+        # Step 1: Initialize clients (10%)
+        status_text.text("🔧 Initializing API clients...")
+        progress_bar.progress(10)
+        
+        reddit_id = os.getenv('REDDIT_CLIENT_ID')
+        reddit_secret = os.getenv('REDDIT_CLIENT_SECRET')
+        reddit_agent = os.getenv('REDDIT_USER_AGENT', 'ai-sn-analysis/1.0')
+        gemini_key = os.getenv('GEMINI_API_KEY')
+        
+        collector = RedditCollector(reddit_id, reddit_secret, reddit_agent)
+        gemini_client = GeminiClient(gemini_key) if use_gemini_ai else GeminiClient(None)
+        
+        # Step 2: Fetch posts (30%)
+        status_text.text(f"📥 Fetching {num_posts} posts from r/{subreddit}...")
+        progress_bar.progress(20)
+        
+        posts = collector.fetch_subreddit_posts(subreddit, limit=num_posts, time_filter=time_filter)
+        
+        if not posts:
+            st.error(f"❌ No posts found for r/{subreddit}. Check if the subreddit exists and is accessible.")
+            progress_bar.empty()
+            status_text.empty()
+            return False
+        
+        progress_bar.progress(30)
+        status_text.text(f"✅ Fetched {len(posts)} posts with {sum(len(p.get('comments', [])) for p in posts)} comments")
+        
+        # Save raw posts
+        with open(f"{output_dir}/{subreddit}_raw_posts.json", 'w', encoding='utf-8') as f:
+            json.dump(posts, f, indent=2, ensure_ascii=False)
+        
+        # Step 3: Build graph (40%)
+        status_text.text("🕸️ Building social network graph...")
+        progress_bar.progress(35)
+        
+        builder = GraphBuilder()
+        G = builder.build_from_posts(posts)
+        
+        if G.number_of_nodes() == 0:
+            st.error("❌ No users found in the posts. The subreddit might be too small or have no interactions.")
+            progress_bar.empty()
+            status_text.empty()
+            return False
+        
+        progress_bar.progress(40)
+        status_text.text(f"✅ Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
+        
+        # Step 4: Community detection (50%)
+        status_text.text("👥 Detecting communities...")
+        progress_bar.progress(45)
+        
+        detect_communities_union_find(G)
+        detect_communities_louvain(G)
+        
+        progress_bar.progress(50)
+        status_text.text("✅ Communities detected")
+        
+        # Step 5: Influence analysis (60%)
+        status_text.text("⭐ Computing influence scores...")
+        progress_bar.progress(55)
+        
+        compute_pagerank(G)
+        
+        progress_bar.progress(60)
+        status_text.text("✅ PageRank computed")
+        
+        # Step 6: MST computation (65%)
+        status_text.text("🌳 Computing minimum spanning tree...")
+        progress_bar.progress(62)
+        
+        mst = compute_mst(G)
+        
+        # Clean MST for GraphML export (remove list/dict attributes)
+        mst_clean = mst.copy()
+        for node in mst_clean.nodes():
+            attrs_to_remove = []
+            for key, value in mst_clean.nodes[node].items():
+                if isinstance(value, (list, dict)):
+                    attrs_to_remove.append(key)
+            for key in attrs_to_remove:
+                del mst_clean.nodes[node][key]
+        
+        for u, v in mst_clean.edges():
+            attrs_to_remove = []
+            for key, value in mst_clean[u][v].items():
+                if isinstance(value, (list, dict)):
+                    attrs_to_remove.append(key)
+            for key in attrs_to_remove:
+                del mst_clean[u][v][key]
+        
+        nx.write_graphml(mst_clean, f"{output_dir}/{subreddit}_mst.graphml")
+        
+        progress_bar.progress(65)
+        
+        # Step 7: Content analysis (80%)
+        if use_gemini_ai:
+            status_text.text("🧠 Running AI content analysis (this may take a while)...")
+        else:
+            status_text.text("⚡ Running fast local content analysis...")
+        progress_bar.progress(68)
+        
+        content_analysis = {}
+        total = len(posts)
+        
+        # Import local analysis function
+        from ai_sn_analysis_prototype import simple_local_text_analysis
+        
+        # Process in batches with progress updates
+        batch_size = 5
+        for idx, post in enumerate(posts):
+            text = f"{post.get('title', '')} {post.get('selftext', '')}"
+            
+            # Use Gemini only if enabled AND text is substantial
+            if use_gemini_ai and len(text.strip()) > 10:
+                content_analysis[post['id']] = gemini_client.analyze_text(text)
+            else:
+                # Use fast local analysis
+                content_analysis[post['id']] = simple_local_text_analysis(text)
+            
+            # Update progress frequently
+            if idx % batch_size == 0 or idx == total - 1:
+                progress = 68 + int((idx / total) * 12)
+                progress_bar.progress(min(progress, 80))
+                if use_gemini_ai:
+                    status_text.text(f"🧠 AI analyzing... {idx+1}/{total} posts (~{(total-idx)*2}s remaining)")
+                else:
+                    status_text.text(f"⚡ Analyzing... {idx+1}/{total} posts")
+        
+        progress_bar.progress(80)
+        status_text.text("✅ Content analysis complete")
+        
+        # Save content analysis
+        with open(f"{output_dir}/{subreddit}_content_analysis.json", 'w', encoding='utf-8') as f:
+            json.dump(content_analysis, f, indent=2, ensure_ascii=False)
+        
+        # Step 8: Trend detection (90%)
+        status_text.text("🔥 Detecting trending topics...")
+        progress_bar.progress(85)
+        
+        trends = detect_trends(posts, content_analysis)
+        
+        with open(f"{output_dir}/{subreddit}_trends.json", 'w', encoding='utf-8') as f:
+            json.dump(trends, f, indent=2, ensure_ascii=False)
+        
+        progress_bar.progress(90)
+        status_text.text("✅ Trends detected")
+        
+        # Step 9: Export data (95%)
+        status_text.text("💾 Exporting results...")
+        progress_bar.progress(92)
+        
+        # Export graph data (JSON - supports all types)
+        graph_data = nx.node_link_data(G)
+        with open(f"{output_dir}/{subreddit}_graph.json", 'w', encoding='utf-8') as f:
+            json.dump(graph_data, f, indent=2)
+        
+        # Clean graph for GraphML export (remove list/dict attributes)
+        G_clean = G.copy()
+        for node in G_clean.nodes():
+            attrs_to_remove = []
+            for key, value in G_clean.nodes[node].items():
+                if isinstance(value, (list, dict)):
+                    attrs_to_remove.append(key)
+            for key in attrs_to_remove:
+                del G_clean.nodes[node][key]
+        
+        for u, v in G_clean.edges():
+            attrs_to_remove = []
+            for key, value in G_clean[u][v].items():
+                if isinstance(value, (list, dict)):
+                    attrs_to_remove.append(key)
+            for key in attrs_to_remove:
+                del G_clean[u][v][key]
+        
+        nx.write_graphml(G_clean, f"{output_dir}/{subreddit}_graph.graphml")
+        
+        # Export nodes and edges CSV
+        nodes_data = []
+        for n in G.nodes():
+            node_attr = G.nodes[n]
+            nodes_data.append({
+                'user': n,
+                'degree': G.degree(n),
+                'pagerank': node_attr.get('pagerank', 0),
+                'community_uf': node_attr.get('community_uf', -1),
+                'community_greedy': node_attr.get('community_greedy', -1),
+                'posts': node_attr.get('posts', 0),
+                'comments': node_attr.get('comments', 0)
+            })
+        pd.DataFrame(nodes_data).to_csv(f"{output_dir}/{subreddit}_nodes.csv", index=False)
+        
+        edges_data = []
+        for u, v, data in G.edges(data=True):
+            edges_data.append({
+                'source': u,
+                'target': v,
+                'weight': data.get('weight', 1),
+                'interaction': data.get('interaction', 'unknown')
+            })
+        pd.DataFrame(edges_data).to_csv(f"{output_dir}/{subreddit}_edges.csv", index=False)
+        
+        progress_bar.progress(95)
+        
+        # Step 10: Generate visualization (100%)
+        status_text.text("🎨 Generating interactive visualization...")
+        progress_bar.progress(97)
+        
+        visualize_graph_plotly(G, out_html=f"{output_dir}/{subreddit}_graph.html")
+        
+        progress_bar.progress(100)
+        status_text.text("✅ Analysis complete!")
+        
+        time.sleep(1)
+        progress_bar.empty()
+        status_text.empty()
+        
+        return True
+        
+    except Exception as e:
+        st.error(f"❌ Analysis failed: {str(e)}")
+        import traceback
+        st.code(traceback.format_exc())
+        return False
+
+# Execute analysis if button clicked
+if analyze_button:
+    st.markdown("---")
+    st.markdown(f"## 🔬 Analyzing r/{subreddit_name}")
+    
+    with st.spinner("Running analysis..."):
+        success = run_analysis(subreddit_name, num_posts, time_filter, output_dir, use_gemini)
+    
+    if success:
+        st.success(f"✅ Analysis of r/{subreddit_name} completed successfully!")
+        st.balloons()
+        selected_subreddit = subreddit_name
+        
+        # Prompt to switch to load mode
+        st.info("💡 Switch to 'Load Existing' mode in sidebar to view the results")
+        st.stop()
+    else:
+        st.stop()
+
 # Helper function to generate community names
 def get_community_name(community_id, nodes_df, community_col, max_name_length=30):
     """
@@ -214,18 +508,47 @@ if selected_subreddit:
     # Load data files
     @st.cache_data
     def load_data(subreddit, output_dir):
+        """Load analysis results with better error handling."""
         data = {}
+        required_files = [
+            ('graph', f"{output_dir}/{subreddit}_graph.json"),
+            ('trends', f"{output_dir}/{subreddit}_trends.json"),
+            ('content', f"{output_dir}/{subreddit}_content_analysis.json"),
+            ('nodes', f"{output_dir}/{subreddit}_nodes.csv"),
+            ('edges', f"{output_dir}/{subreddit}_edges.csv"),
+            ('posts', f"{output_dir}/{subreddit}_raw_posts.json")
+        ]
+        
+        missing_files = []
+        
+        for key, filepath in required_files:
+            if not os.path.exists(filepath):
+                missing_files.append(os.path.basename(filepath))
+        
+        if missing_files:
+            st.error(f"❌ Missing analysis files for r/{subreddit}:")
+            for file in missing_files:
+                st.write(f"   - {file}")
+            
+            st.info("💡 **Solution:** Run a new analysis for this subreddit:")
+            st.code(f"""
+1. Switch to "🔍 New Analysis" mode in sidebar
+2. Enter "{subreddit}" as subreddit name
+3. Click "🚀 Start Analysis"
+            """)
+            return None
+        
         try:
             # Load graph
-            with open(f"{output_dir}/{subreddit}_graph.json", 'r') as f:
+            with open(f"{output_dir}/{subreddit}_graph.json", 'r', encoding='utf-8') as f:
                 data['graph'] = json.load(f)
             
             # Load trends
-            with open(f"{output_dir}/{subreddit}_trends.json", 'r') as f:
+            with open(f"{output_dir}/{subreddit}_trends.json", 'r', encoding='utf-8') as f:
                 data['trends'] = json.load(f)
             
             # Load content analysis
-            with open(f"{output_dir}/{subreddit}_content_analysis.json", 'r') as f:
+            with open(f"{output_dir}/{subreddit}_content_analysis.json", 'r', encoding='utf-8') as f:
                 data['content'] = json.load(f)
             
             # Load nodes and edges
@@ -233,16 +556,50 @@ if selected_subreddit:
             data['edges'] = pd.read_csv(f"{output_dir}/{subreddit}_edges.csv")
             
             # Load raw posts
-            with open(f"{output_dir}/{subreddit}_raw_posts.json", 'r') as f:
+            with open(f"{output_dir}/{subreddit}_raw_posts.json", 'r', encoding='utf-8') as f:
                 data['posts'] = json.load(f)
+            
+            st.success(f"✅ Loaded analysis for r/{subreddit}")
+            return data
                 
-        except FileNotFoundError as e:
-            st.error(f"Missing file: {e}")
+        except Exception as e:
+            st.error(f"❌ Error loading data: {str(e)}")
+            import traceback
+            with st.expander("Show error details"):
+                st.code(traceback.format_exc())
+            with st.expander("Show error details"):
+                st.code(traceback.format_exc())
             return None
-        
-        return data
     
-    data = load_data(selected_subreddit, output_dir)
+    # Only load data if a subreddit is selected
+    if selected_subreddit:
+        data = load_data(selected_subreddit, output_dir)
+    else:
+        data = None
+        st.info("👈 Select an analysis from the sidebar or run a new analysis to get started!")
+        st.markdown("""
+        ### 🚀 Getting Started
+        
+        **Option 1: Analyze a New Subreddit**
+        1. Switch to "🔍 New Analysis" mode in sidebar
+        2. Enter a subreddit name (e.g., "python", "machinelearning")
+        3. Choose number of posts and time filter
+        4. Click "🚀 Start Analysis"
+        
+        **Option 2: Load Existing Results**
+        1. Make sure you're in "📂 Load Existing" mode
+        2. Select a subreddit from the dropdown
+        3. View all the analysis results
+        
+        ---
+        
+        ### 📚 Example Subreddits to Try:
+        - **r/python** - Python programming community
+        - **r/machinelearning** - ML and AI discussions
+        - **r/datascience** - Data science community
+        - **r/learnprogramming** - Beginner-friendly programming
+        - **r/technology** - Tech news and discussions
+        """)
     
     if data:
         # Create tabs
@@ -512,33 +869,45 @@ if selected_subreddit:
             st.header("⭐ Influence Analysis - Top Users")
             
             st.markdown("""
-            Influence is measured using multiple centrality metrics:
-            - **PageRank**: Overall influence in the network
-            - **Betweenness**: Bridge between communities
-            - **Closeness**: Central position in network
-            - **Degree**: Direct connections
+            Influence is measured using centrality metrics:
+            - **PageRank**: Overall influence in the network (Google's algorithm)
+            - **Degree**: Direct connections with other users
+            - **Posts & Comments**: Contribution activity levels
             """)
             
             # Top influencers by PageRank
             st.subheader("🏆 Top Influencers by PageRank")
             
             if 'pagerank' in data['nodes'].columns:
-                top_influencers = data['nodes'].nlargest(20, 'pagerank')[[
-                    'user', 'pagerank', 'degree', 'betweenness', 'closeness',
-                    'community_greedy', 'posts', 'comments'
-                ]].copy()
+                # Get available columns
+                available_cols = ['user', 'pagerank', 'degree']
+                optional_cols = ['community_greedy', 'posts', 'comments']
                 
-                top_influencers.columns = [
-                    'User', 'PageRank', 'Connections', 'Betweenness', 
-                    'Closeness', 'Community', 'Posts', 'Comments'
-                ]
+                # Add optional columns if they exist
+                for col in optional_cols:
+                    if col in data['nodes'].columns:
+                        available_cols.append(col)
                 
-                # Format numeric columns
-                # Format numeric columns as strings for display
-                top_influencers['PageRank'] = top_influencers['PageRank'].apply(lambda x: f"{x:.6f}")
-                top_influencers['Betweenness'] = top_influencers['Betweenness'].apply(lambda x: f"{x:.4f}")
-                top_influencers['Closeness'] = top_influencers['Closeness'].apply(lambda x: f"{x:.4f}")
-                top_influencers['Community'] = top_influencers['Community'].astype(str)
+                top_influencers = data['nodes'].nlargest(20, 'pagerank')[available_cols].copy()
+                
+                # Create column name mapping
+                col_mapping = {
+                    'user': 'User',
+                    'pagerank': 'PageRank',
+                    'degree': 'Connections',
+                    'community_greedy': 'Community',
+                    'posts': 'Posts',
+                    'comments': 'Comments'
+                }
+                
+                # Rename only available columns
+                top_influencers.columns = [col_mapping.get(c, c) for c in top_influencers.columns]
+                
+                # Format numeric columns (only if they exist)
+                if 'PageRank' in top_influencers.columns:
+                    top_influencers['PageRank'] = top_influencers['PageRank'].apply(lambda x: f"{x:.6f}")
+                if 'Community' in top_influencers.columns:
+                    top_influencers['Community'] = top_influencers['Community'].astype(str)
                 
                 st.dataframe(top_influencers, width='stretch', hide_index=True)
                 
@@ -566,11 +935,11 @@ if selected_subreddit:
                         data['nodes'].head(100),
                         x='degree',
                         y='pagerank',
-                        size='betweenness',
+                        size='degree',
                         hover_data=['user'],
                         title="Influence Metrics Correlation",
                         labels={'degree': 'Connections', 'pagerank': 'PageRank'},
-                        color='betweenness',
+                        color='pagerank',
                         color_continuous_scale='Plasma'
                     )
                     fig.update_traces(showlegend=False)
