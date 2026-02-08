@@ -111,11 +111,15 @@ with st.sidebar:
         num_posts = st.slider(
             "📝 Number of Posts",
             min_value=10,
-            max_value=500,
+            max_value=200,
             value=50,
             step=10,
             help="More posts = better insights but slower analysis"
         )
+        
+        # Performance warnings
+        if num_posts > 100:
+            st.warning("⚠️ >100 posts may take 3-5 minutes. Consider reducing for faster results.")
         
         # Time filter
         time_filter = st.selectbox(
@@ -129,13 +133,61 @@ with st.sidebar:
         use_gemini = st.checkbox(
             "🤖 Use Gemini AI for content analysis",
             value=False,
-            help="⚠️ Slower but more accurate. Unchecked = fast local analysis"
+            help="⚠️ Free tier limited to 15 requests/min. Smart prioritization enabled."
         )
         
         if use_gemini:
-            st.warning("⏱️ AI analysis adds ~2-3 seconds per post. For 50 posts: ~2-3 minutes extra.")
+            st.warning("🔥 **Free Tier Rate Limit: 15 requests/min**")
+            
+            max_ai_posts = st.slider(
+                "🎯 Max AI-analyzed posts (rest use fast local)",
+                min_value=5,
+                max_value=50,
+                value=20,
+                step=5,
+                help="Smart algorithm picks most important posts for AI analysis"
+            )
+            
+            # Save to session state for use in analysis
+            st.session_state['max_ai_requests'] = max_ai_posts
+            
+            # Calculate accurate time estimate
+            ai_minutes = max_ai_posts / 14  # 14 RPM (safety margin under 15)
+            st.info(f"⏱️ Estimated AI time: ~{ai_minutes:.1f} minutes for {max_ai_posts} posts + instant local for others")
         else:
             st.info("⚡ Using fast local analysis (instant, good enough for most cases)")
+            st.session_state['max_ai_requests'] = 0
+        
+        # Advanced Analytics toggle
+        st.markdown("---")
+        st.markdown("### 🔬 Advanced Analytics")
+        
+        enable_advanced = st.checkbox(
+            "🚀 Enable Advanced Features",
+            value=False,
+            help="Includes: Temporal Evolution, Sentiment Networks, ML Predictions, Validation Metrics"
+        )
+        
+        if enable_advanced:
+            st.success("✅ Advanced analytics enabled (+30-40 seconds)")
+            
+            # Data Append Mode
+            append_mode = st.selectbox(
+                "📊 Data Append Strategy",
+                ["auto", "always", "never"],
+                index=0,
+                help="Auto: Append if >7 days old | Always: Cumulative | Never: Fresh"
+            )
+            
+            append_help = {
+                "auto": "🔄 Smart merge (appends if last analysis >7 days old)",
+                "always": "📈 Cumulative analysis (always merge with existing data)",
+                "never": "🆕 Fresh analysis (replace all existing data)"
+            }
+            st.info(append_help[append_mode])
+        else:
+            st.info("⚡ Standard analysis only (faster)")
+            append_mode = "never"
         
         # API credentials check
         st.markdown("---")
@@ -216,13 +268,15 @@ with st.sidebar:
     """)
 
 # ========== REAL-TIME ANALYSIS EXECUTION ==========
-def run_analysis(subreddit, num_posts, time_filter, output_dir, use_gemini_ai=False):
+def run_analysis(subreddit, num_posts, time_filter, output_dir, use_gemini_ai=False, enable_advanced=True, append_mode="auto"):
     """
     Run complete social network analysis pipeline with progress tracking.
     
     Args:
         use_gemini_ai: If True, use Gemini API for content analysis (slower but better).
                        If False, use local analysis (much faster).
+        enable_advanced: If True, run advanced analytics (temporal, sentiment, ML, validation).
+        append_mode: 'auto', 'always', or 'never' - determines data merging strategy.
     """
     try:
         # Create output directory
@@ -333,32 +387,26 @@ def run_analysis(subreddit, num_posts, time_filter, output_dir, use_gemini_ai=Fa
             status_text.text("⚡ Running fast local content analysis...")
         progress_bar.progress(68)
         
-        content_analysis = {}
-        total = len(posts)
+        # Import smart analysis
+        from ai_sn_analysis_prototype import smart_gemini_analysis
         
-        # Import local analysis function
-        from ai_sn_analysis_prototype import simple_local_text_analysis
+        # Get max AI requests from session state
+        max_ai_requests = st.session_state.get('max_ai_requests', 20)
         
-        # Process in batches with progress updates
-        batch_size = 5
-        for idx, post in enumerate(posts):
-            text = f"{post.get('title', '')} {post.get('selftext', '')}"
-            
-            # Use Gemini only if enabled AND text is substantial
-            if use_gemini_ai and len(text.strip()) > 10:
-                content_analysis[post['id']] = gemini_client.analyze_text(text)
-            else:
-                # Use fast local analysis
-                content_analysis[post['id']] = simple_local_text_analysis(text)
-            
-            # Update progress frequently
-            if idx % batch_size == 0 or idx == total - 1:
-                progress = 68 + int((idx / total) * 12)
-                progress_bar.progress(min(progress, 80))
-                if use_gemini_ai:
-                    status_text.text(f"🧠 AI analyzing... {idx+1}/{total} posts (~{(total-idx)*2}s remaining)")
-                else:
-                    status_text.text(f"⚡ Analyzing... {idx+1}/{total} posts")
+        # Progress callback for real-time updates
+        def update_progress(current, total_count, message):
+            progress = 68 + int((current / total_count) * 12)
+            progress_bar.progress(min(progress, 80))
+            status_text.text(message)
+        
+        # Use smart analysis with prioritization and rate limiting
+        content_analysis = smart_gemini_analysis(
+            posts,
+            gemini_client,
+            use_gemini=use_gemini_ai,
+            max_requests=max_ai_requests,
+            progress_callback=update_progress
+        )
         
         progress_bar.progress(80)
         status_text.text("✅ Content analysis complete")
@@ -378,6 +426,80 @@ def run_analysis(subreddit, num_posts, time_filter, output_dir, use_gemini_ai=Fa
         
         progress_bar.progress(90)
         status_text.text("✅ Trends detected")
+        
+        # Step 8.5: Advanced Analytics (if enabled)
+        if enable_advanced:
+            try:
+                from advanced_analytics import (
+                    validate_influence_metrics,
+                    build_sentiment_weighted_graphs,
+                    build_temporal_graphs,
+                    detect_community_evolution,
+                    build_multilayer_network,
+                    train_viral_predictor
+                )
+                
+                status_text.text("🔬 Running advanced analytics...")
+                progress_bar.progress(91)
+                
+                # Validation metrics
+                try:
+                    validation_results = validate_influence_metrics(G, posts)
+                    with open(f"{output_dir}/{subreddit}_validation.json", 'w', encoding='utf-8') as f:
+                        json.dump(validation_results, f, indent=2)
+                except Exception as e:
+                    print(f"⚠️ Validation metrics failed: {e}")
+                
+                # Sentiment networks
+                try:
+                    sentiment_graphs = build_sentiment_weighted_graphs(posts, content_analysis)
+                    with open(f"{output_dir}/{subreddit}_sentiment_networks.json", 'w', encoding='utf-8') as f:
+                        json.dump({
+                            'positive': nx.node_link_data(sentiment_graphs['positive']),
+                            'negative': nx.node_link_data(sentiment_graphs['negative']),
+                            'neutral': nx.node_link_data(sentiment_graphs['neutral']),
+                            'stats': sentiment_graphs['stats']
+                        }, f, indent=2)
+                except Exception as e:
+                    print(f"⚠️ Sentiment networks failed: {e}")
+                
+                # Temporal evolution
+                try:
+                    temporal_data = build_temporal_graphs(posts)
+                    evolution_data = detect_community_evolution(temporal_data['graphs'])
+                    with open(f"{output_dir}/{subreddit}_evolution.json", 'w', encoding='utf-8') as f:
+                        json.dump({
+                            'temporal': {k: nx.node_link_data(v) for k, v in temporal_data['graphs'].items()},
+                            'timeline': temporal_data['timeline'],
+                            'evolution': evolution_data
+                        }, f, indent=2)
+                except Exception as e:
+                    print(f"⚠️ Temporal evolution failed: {e}")
+                
+                # Multi-layer network
+                try:
+                    layers = build_multilayer_network(posts)
+                    with open(f"{output_dir}/{subreddit}_layers.json", 'w', encoding='utf-8') as f:
+                        json.dump({
+                            'reply': nx.node_link_data(layers['reply']),
+                            'mention': nx.node_link_data(layers['mention']),
+                            'topic': nx.node_link_data(layers['topic'])
+                        }, f, indent=2)
+                except Exception as e:
+                    print(f"⚠️ Multi-layer network failed: {e}")
+                
+                # ML viral predictor
+                try:
+                    predictor_results = train_viral_predictor(posts, G, content_analysis)
+                    with open(f"{output_dir}/{subreddit}_predictor.json", 'w', encoding='utf-8') as f:
+                        json.dump(predictor_results, f, indent=2)
+                except Exception as e:
+                    print(f"⚠️ ML predictor failed: {e}")
+                
+                status_text.text("✅ Advanced analytics complete")
+                
+            except Exception as e:
+                st.warning(f"⚠️ Advanced analytics partially failed: {str(e)}")
         
         # Step 9: Export data (95%)
         status_text.text("💾 Exporting results...")
@@ -462,7 +584,7 @@ if analyze_button:
     st.markdown(f"## 🔬 Analyzing r/{subreddit_name}")
     
     with st.spinner("Running analysis..."):
-        success = run_analysis(subreddit_name, num_posts, time_filter, output_dir, use_gemini)
+        success = run_analysis(subreddit_name, num_posts, time_filter, output_dir, use_gemini, enable_advanced, append_mode)
     
     if success:
         st.success(f"✅ Analysis of r/{subreddit_name} completed successfully!")
@@ -603,14 +725,18 @@ if selected_subreddit:
     
     if data:
         # Create tabs
-        tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+        tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10, tab11 = st.tabs([
             "📊 Overview", 
             "👥 Communities", 
             "⭐ Influencers", 
             "🔥 Trending Topics",
             "🕸️ Network Graph",
             "🧠 AI Insights",
-            "📈 Analytics"
+            "📈 Analytics",
+            "⏰ Temporal Evolution",
+            "✅ Validation Metrics",
+            "🔀 Sentiment Networks",
+            "🎯 ML Predictions"
         ])
         
         # TAB 1: OVERVIEW
@@ -1392,6 +1518,369 @@ if selected_subreddit:
                     file_name=f"{selected_subreddit}_trends.json",
                     mime="application/json"
                 )
+        
+        # TAB 8: TEMPORAL EVOLUTION
+        with tab8:
+            st.header("⏰ Temporal Evolution Analysis")
+            
+            # Load temporal evolution data
+            evolution_file = f"{output_dir}/{selected_subreddit}_evolution.json"
+            
+            if os.path.exists(evolution_file):
+                with open(evolution_file, 'r') as f:
+                    evolution_data = json.load(f)
+                
+                st.subheader("📈 Community Growth Over Time")
+                
+                # Timeline metrics
+                if 'timeline' in evolution_data and evolution_data['timeline']:
+                    timeline_df = pd.DataFrame(evolution_data['timeline'])
+                    
+                    col1, col2 = st.columns(2)
+                    
+                    with col1:
+                        # Growth chart
+                        fig_growth = px.line(
+                            timeline_df,
+                            x='period',
+                            y='nodes',
+                            title='Network Growth',
+                            labels={'nodes': 'Number of Users', 'period': 'Time Period'}
+                        )
+                        st.plotly_chart(fig_growth, use_container_width=True)
+                    
+                    with col2:
+                        # Engagement chart
+                        fig_engagement = px.line(
+                            timeline_df,
+                            x='period',
+                            y='edges',
+                            title='Interaction Growth',
+                            labels={'edges': 'Number of Interactions', 'period': 'Time Period'}
+                        )
+                        st.plotly_chart(fig_engagement, use_container_width=True)
+                
+                # Evolution metrics
+                if 'evolution' in evolution_data:
+                    st.subheader("🔄 Community Evolution")
+                    
+                    col1, col2, col3 = st.columns(3)
+                    
+                    with col1:
+                        stability = evolution_data['evolution'].get('stability', 0)
+                        st.metric(
+                            "Community Stability",
+                            f"{stability:.1%}",
+                            "Consistency score"
+                        )
+                    
+                    with col2:
+                        churn = evolution_data['evolution'].get('churn_rate', 0)
+                        st.metric(
+                            "User Churn Rate",
+                            f"{churn:.1%}",
+                            "Lost users"
+                        )
+                    
+                    with col3:
+                        new_users = evolution_data['evolution'].get('new_users', 0)
+                        st.metric(
+                            "New Users",
+                            f"{new_users}",
+                            "Recent period"
+                        )
+                    
+                    # Changes over time
+                    if 'changes' in evolution_data['evolution']:
+                        st.markdown("### 📊 Community Changes")
+                        changes_df = pd.DataFrame(evolution_data['evolution']['changes'])
+                        st.dataframe(changes_df, use_container_width=True)
+            else:
+                st.info("⚠️ Temporal evolution data not available. Enable advanced analytics when running analysis.")
+        
+        # TAB 9: VALIDATION METRICS
+        with tab9:
+            st.header("✅ Validation & Accuracy Metrics")
+            
+            # Load validation data
+            validation_file = f"{output_dir}/{selected_subreddit}_validation.json"
+            
+            if os.path.exists(validation_file):
+                with open(validation_file, 'r') as f:
+                    validation_data = json.load(f)
+                
+                st.subheader("🎯 PageRank Accuracy Assessment")
+                
+                col1, col2, col3 = st.columns(3)
+                
+                with col1:
+                    correlation = validation_data.get('correlation', {}).get('spearman', 0)
+                    accuracy_level = "High" if correlation > 0.7 else "Moderate" if correlation > 0.4 else "Low"
+                    st.metric(
+                        "Correlation Score",
+                        f"{correlation:.3f}",
+                        accuracy_level
+                    )
+                
+                with col2:
+                    pearson = validation_data.get('correlation', {}).get('pearson', 0)
+                    st.metric(
+                        "Pearson Correlation",
+                        f"{pearson:.3f}",
+                        "Linear relationship"
+                    )
+                
+                with col3:
+                    accuracy = validation_data.get('accuracy', 'Unknown')
+                    st.metric(
+                        "Overall Accuracy",
+                        accuracy,
+                        "PageRank vs Engagement"
+                    )
+                
+                # Scatter plot: PageRank vs Actual Engagement
+                if 'top_influencers' in validation_data:
+                    st.subheader("📊 PageRank vs Actual Engagement")
+                    
+                    influencers_df = pd.DataFrame(validation_data['top_influencers'])
+                    
+                    fig_validation = px.scatter(
+                        influencers_df,
+                        x='pagerank',
+                        y='actual_engagement',
+                        size='actual_engagement',
+                        hover_data=['user'],
+                        title='PageRank Accuracy Validation',
+                        labels={
+                            'pagerank': 'Predicted Influence (PageRank)',
+                            'actual_engagement': 'Actual Engagement (Posts + Comments)'
+                        }
+                    )
+                    st.plotly_chart(fig_validation, use_container_width=True)
+                    
+                    st.markdown("### 🔬 Interpretation")
+                    st.markdown(f"""
+                    - **Correlation: {correlation:.3f}** - {accuracy_level} accuracy
+                    - **r > 0.7**: PageRank accurately predicts influential users
+                    - **0.4 < r < 0.7**: Moderate prediction accuracy
+                    - **r < 0.4**: PageRank may not reflect true influence
+                    
+                    **Conclusion**: {'✅ PageRank is a reliable influence metric' if correlation > 0.7 else '⚠️ Consider additional metrics for influence assessment' if correlation > 0.4 else '❌ PageRank shows poor correlation with engagement'}
+                    """)
+            else:
+                st.info("⚠️ Validation metrics not available. Enable advanced analytics when running analysis.")
+        
+        # TAB 10: SENTIMENT NETWORKS
+        with tab10:
+            st.header("🔀 Sentiment-Weighted Network Analysis")
+            
+            # Load sentiment network data
+            sentiment_file = f"{output_dir}/{selected_subreddit}_sentiment_networks.json"
+            
+            if os.path.exists(sentiment_file):
+                try:
+                    with open(sentiment_file, 'r') as f:
+                        content = f.read().strip()
+                        if not content:
+                            st.warning("⚠️ Sentiment networks file is empty. Run analysis with 'Enable Advanced Features' to generate sentiment networks.")
+                        else:
+                            sentiment_data = json.loads(content)
+                            
+                            st.subheader("😊 Sentiment Distribution")
+                            
+                            # Sentiment stats
+                            stats = sentiment_data.get('stats', {})
+                            
+                            col1, col2, col3 = st.columns(3)
+                            
+                            with col1:
+                                pos_count = stats.get('positive_count', 0)
+                                st.metric(
+                                    "😊 Positive Interactions",
+                                    f"{pos_count}",
+                                    f"{stats.get('positive_pct', 0):.1f}%"
+                                )
+                            
+                            with col2:
+                                neu_count = stats.get('neutral_count', 0)
+                                st.metric(
+                                    "😐 Neutral Interactions",
+                                    f"{neu_count}",
+                                    f"{stats.get('neutral_pct', 0):.1f}%"
+                                )
+                            
+                            with col3:
+                                neg_count = stats.get('negative_count', 0)
+                                st.metric(
+                                    "😞 Negative Interactions",
+                                    f"{neg_count}",
+                                    f"{stats.get('negative_pct', 0):.1f}%"
+                                )
+                            
+                            # Pie chart
+                            sentiment_counts = {
+                                'Positive': pos_count,
+                                'Neutral': neu_count,
+                                'Negative': neg_count
+                            }
+                            
+                            fig_pie = px.pie(
+                                values=list(sentiment_counts.values()),
+                                names=list(sentiment_counts.keys()),
+                                title='Sentiment Distribution',
+                                color_discrete_map={
+                                    'Positive': '#00cc96',
+                                    'Neutral': '#636efa',
+                                    'Negative': '#ef553b'
+                                }
+                            )
+                            st.plotly_chart(fig_pie, use_container_width=True)
+                            
+                            # Network comparison
+                            st.subheader("🕸️ Sentiment Network Comparison")
+                            
+                            col1, col2, col3 = st.columns(3)
+                            
+                            with col1:
+                                st.markdown("### 😊 Positive Network")
+                                pos_graph = sentiment_data.get('positive', {})
+                                st.metric("Nodes", len(pos_graph.get('nodes', [])))
+                                st.metric("Edges", len(pos_graph.get('links', [])))
+                            
+                            with col2:
+                                st.markdown("### 😐 Neutral Network")
+                                neu_graph = sentiment_data.get('neutral', {})
+                                st.metric("Nodes", len(neu_graph.get('nodes', [])))
+                                st.metric("Edges", len(neu_graph.get('links', [])))
+                            
+                            with col3:
+                                st.markdown("### 😞 Negative Network")
+                                neg_graph = sentiment_data.get('negative', {})
+                                st.metric("Nodes", len(neg_graph.get('nodes', [])))
+                                st.metric("Edges", len(neg_graph.get('links', [])))
+                            
+                            st.markdown("### 💡 Insights")
+                            
+                            # Community health based on sentiment
+                            pos_pct = stats.get('positive_pct', 0)
+                            neg_pct = stats.get('negative_pct', 0)
+                            
+                            if pos_pct > 50:
+                                health = "✅ **Healthy Community**: Majority of interactions are positive"
+                            elif neg_pct > 50:
+                                health = "⚠️ **Challenging Community**: High negative sentiment detected"
+                            else:
+                                health = "🔄 **Mixed Community**: Balanced sentiment distribution"
+                            
+                            st.markdown(health)
+                            
+                except json.JSONDecodeError as e:
+                    st.error(f"❌ Error reading sentiment networks file: {e}")
+                    st.info("💡 Try running a new analysis with 'Enable Advanced Features' turned ON.")
+            else:
+                st.warning("⚠️ No sentiment network data found. Run analysis with 'Enable Advanced Features' to generate sentiment networks.")
+        
+        # TAB 11: ML PREDICTIONS
+        with tab11:
+            st.header("🎯 Machine Learning Viral Content Prediction")
+            
+            # Load ML predictor data
+            predictor_file = f"{output_dir}/{selected_subreddit}_predictor.json"
+            
+            if os.path.exists(predictor_file):
+                with open(predictor_file, 'r') as f:
+                    predictor_data = json.load(f)
+                
+                st.subheader("📊 Model Performance")
+                
+                # Model metrics
+                metrics = predictor_data.get('metrics', {})
+                
+                col1, col2, col3, col4 = st.columns(4)
+                
+                with col1:
+                    accuracy = metrics.get('accuracy', 0)
+                    st.metric(
+                        "Accuracy",
+                        f"{accuracy:.1%}",
+                        "Overall correctness"
+                    )
+                
+                with col2:
+                    precision = metrics.get('precision', 0)
+                    st.metric(
+                        "Precision",
+                        f"{precision:.1%}",
+                        "Viral prediction accuracy"
+                    )
+                
+                with col3:
+                    recall = metrics.get('recall', 0)
+                    st.metric(
+                        "Recall",
+                        f"{recall:.1%}",
+                        "Viral detection rate"
+                    )
+                
+                with col4:
+                    f1 = metrics.get('f1_score', 0)
+                    st.metric(
+                        "F1 Score",
+                        f"{f1:.1%}",
+                        "Balanced metric"
+                    )
+                
+                # Feature importance
+                if 'feature_importance' in predictor_data:
+                    st.subheader("🔍 Feature Importance")
+                    
+                    features_df = pd.DataFrame(
+                        list(predictor_data['feature_importance'].items()),
+                        columns=['Feature', 'Importance']
+                    ).sort_values('Importance', ascending=False)
+                    
+                    fig_features = px.bar(
+                        features_df,
+                        x='Importance',
+                        y='Feature',
+                        orientation='h',
+                        title='Top Predictive Features',
+                        color='Importance',
+                        color_continuous_scale='Viridis'
+                    )
+                    st.plotly_chart(fig_features, use_container_width=True)
+                    
+                    st.markdown("### 💡 Key Findings")
+                    top_feature = features_df.iloc[0]['Feature']
+                    st.markdown(f"- **Most Important**: {top_feature} is the strongest predictor of viral content")
+                    st.markdown(f"- **Model Accuracy**: {accuracy:.1%} success rate in predicting viral posts")
+                    st.markdown(f"- **Reliability**: {'High' if accuracy > 0.8 else 'Moderate' if accuracy > 0.6 else 'Low'} - {'Use with confidence' if accuracy > 0.8 else 'Consider as one of multiple factors' if accuracy > 0.6 else 'Use cautiously'}")
+                
+                # Predictions
+                if 'predictions' in predictor_data and predictor_data['predictions']:
+                    st.subheader("🎯 Top Viral Predictions")
+                    
+                    predictions_df = pd.DataFrame(predictor_data['predictions'])
+                    predictions_df = predictions_df.sort_values('viral_probability', ascending=False).head(10)
+                    
+                    st.dataframe(
+                        predictions_df[['title', 'viral_probability', 'predicted_viral', 'actual_score']],
+                        use_container_width=True
+                    )
+                    
+                    st.markdown("### 📈 Prediction Distribution")
+                    
+                    fig_dist = px.histogram(
+                        pd.DataFrame(predictor_data['predictions']),
+                        x='viral_probability',
+                        nbins=20,
+                        title='Viral Probability Distribution',
+                        labels={'viral_probability': 'Predicted Viral Probability'}
+                    )
+                    st.plotly_chart(fig_dist, use_container_width=True)
+                
+            else:
+                st.info("⚠️ ML prediction data not available. Enable advanced analytics when running analysis.")
 
 else:
     # No data available
@@ -1410,7 +1899,8 @@ else:
        streamlit run dashboard.py
        ```
     
-    3. Select your analysis from the sidebar
+    3. Select your analysis from the side
+    bar
     
     4. Explore the insights!
     """)

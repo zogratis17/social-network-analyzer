@@ -1,0 +1,5514 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "first_seen": "2025-10-16T01:15:49.993315+00:00",
+      "posts": 30,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.24754020626057588,
+      "degree": 132,
+      "id": "BusinessToday"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993418+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 18,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Dr_Doom_0333"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993509+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 16,
+      "pagerank": 0.004752517935448742,
+      "degree": 3,
+      "id": "Remote-Care-2146"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993562+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 17,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Ok_Worth4113"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993601+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Onetyone_111"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993637+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "PlumeCache"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993679+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "MrCheapore"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993718+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 18,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Salt-Cockroach3353"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993754+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 16,
+      "pagerank": 0.003660641989070331,
+      "degree": 2,
+      "id": "RareTwist625"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993788+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 17,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Beginning_Junket6821"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.993992+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 19,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "IllustriousShirt129"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994032+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 21,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Remote_Tap6299"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994076+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 20,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "The-Elephants"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994505+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 22,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Crunch_Munch_Munch"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994572+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Hitman47_x"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994619+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "WAG5PE"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994659+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "VernaVincent"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994695+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 19,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "FamousEstate6708"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994730+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 21,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "dry7powder"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994767+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 20,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Ok_Pin7994"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994800+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 22,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Milky_Plug"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994895+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.008142592840561598,
+      "degree": 4,
+      "id": "ihategettingbann"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994945+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 5,
+      "pagerank": 0.008792263826650878,
+      "degree": 4,
+      "id": "PsychologicalYam3602"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.994981+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 8,
+      "pagerank": 0.006936269828205564,
+      "degree": 4,
+      "id": "ScratchLife1983"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995024+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Open_Reality3232"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995080+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 23,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Tlegendz"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995112+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Such-Volume8631"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995144+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.006929764839391172,
+      "degree": 3,
+      "id": "ItchyResponse0584"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995187+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0028535970446396898,
+      "degree": 3,
+      "id": "bitchcoin5000"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995223+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "janamrkvova"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995298+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Problematic_Loner"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995340+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "ninjamammal"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995372+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "EvenAd9876"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995401+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Glittering_Cap_1262"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995429+00:00",
+      "comments": 4,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.024889343894519127,
+      "degree": 13,
+      "id": "PkSaAu"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:49.995471+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Falcon10trooper"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003739+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "livingbymyself"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003795+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Buffalo_Soldier2024"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003836+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Seattleboy1374"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003867+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Acrobatic_Ear_1888"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003904+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "wizzle21"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003938+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Alarmed_Vermicelli68"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.003977+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Suspicious-Durian980"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004019+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Sea_Assignment2218"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004058+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0028535970446396898,
+      "degree": 3,
+      "id": "Soft_Number_7145"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004131+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 5,
+      "pagerank": 0.00677239088104981,
+      "degree": 3,
+      "id": "sf_warriors"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004172+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 8,
+      "pagerank": 0.004588638988292989,
+      "degree": 2,
+      "id": "deviprsd"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004202+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 8,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "ConditionFew2780"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004234+00:00",
+      "comments": 1,
+      "community_uf": 1,
+      "community_greedy": 35,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "whachamacallme"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004256+00:00",
+      "comments": 1,
+      "community_uf": 2,
+      "community_greedy": 36,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "SniffingBrain"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004274+00:00",
+      "comments": 1,
+      "community_uf": 3,
+      "community_greedy": 37,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "saisketches"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004290+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Horror-Shower7672"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004318+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 23,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Ugly0gre"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004692+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.017147795094633617,
+      "degree": 4,
+      "id": "Remarkable_Class958"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004763+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "anon-47"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004816+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 5,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Penguin_Nipples"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004928+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "good_man_101"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.004988+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Upset_Photograph2098"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005022+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Icywillow1904"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005081+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.012020361079638976,
+      "degree": 4,
+      "id": "mightyzinger5"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005144+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 5,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Medical_Entertainer6"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005219+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.008928938964167485,
+      "degree": 2,
+      "id": "Aromatic-Chemical968"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005309+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Psychological-Iron81"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005367+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Next-Owl5090"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005599+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Inside-Respond904"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005697+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 2,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Skullkhlown"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005867+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.004393780519054747,
+      "degree": 4,
+      "id": "unicosplan"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005915+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.003207740932098936,
+      "degree": 2,
+      "id": "new_reditor"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005951+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.0032802708484006788,
+      "degree": 2,
+      "id": "lostsoul_43"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.005983+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.00665903240369563,
+      "degree": 6,
+      "id": "Ok_Ability1345"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006069+00:00",
+      "comments": 4,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0047747128207286105,
+      "degree": 3,
+      "id": "Pravrc123"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006104+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Debunk2025"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006138+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Potential_Abies9262"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006186+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "etoipi1"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006218+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 2,
+      "id": "Fourstrokeperro"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006260+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 9,
+      "pagerank": 0.004430280294056577,
+      "degree": 3,
+      "id": "No-Clue-5593"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006294+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "GroupFun5219"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.006329+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0026082686779557666,
+      "degree": 2,
+      "id": "StudiesAlt97"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.016525+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "SherbertTechnical247"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.016745+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "amiagoodguy02"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.016999+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "ImpressiveNeat9039"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017167+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 10,
+      "pagerank": 0.0027737160269695376,
+      "degree": 2,
+      "id": "MagicCookie07"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017238+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "UsualResponsible593"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017298+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 10,
+      "pagerank": 0.003998564808249501,
+      "degree": 4,
+      "id": "Ok_Mathematician55"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017694+00:00",
+      "comments": 17,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.03137379300023904,
+      "degree": 21,
+      "id": "Appropriate-Tap7860"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017837+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 24,
+      "pagerank": 0.005857170272556901,
+      "degree": 3,
+      "id": "Maleficent_Owl3938"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017926+00:00",
+      "comments": 7,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.01885079597163246,
+      "degree": 10,
+      "id": "Hatiyaar"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.017981+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.0016407690434692623,
+      "degree": 3,
+      "id": "Zealousideal-Row608"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.018056+00:00",
+      "comments": 5,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.009650410606560907,
+      "degree": 6,
+      "id": "Upper_Cut_3337"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.018206+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0071333200298068925,
+      "degree": 3,
+      "id": "Anonreddit96"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.018308+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 9,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "trumpsucks12354"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.018353+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 9,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "hello-354748"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.018420+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0034161845382814932,
+      "degree": 4,
+      "id": "darkninjademon"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019076+00:00",
+      "comments": 5,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.03228269776635254,
+      "degree": 10,
+      "id": "666shanx"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019106+00:00",
+      "comments": 6,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.00790865659798796,
+      "degree": 3,
+      "id": "CartographerBorn46"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019135+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 24,
+      "pagerank": 0.004959886489442198,
+      "degree": 2,
+      "id": "One_Advantage_7193"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019202+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.005323617602583852,
+      "degree": 3,
+      "id": "Useful-Ad9013"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019245+00:00",
+      "comments": 7,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.008505047844932057,
+      "degree": 4,
+      "id": "I_Love_Mice"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019288+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.003928861977290195,
+      "degree": 2,
+      "id": "Darksenon00"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019378+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.004752517935448742,
+      "degree": 3,
+      "id": "Stunningunipeg"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019406+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.004852367619278546,
+      "degree": 5,
+      "id": "Bubbly_Concert1411"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019431+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.004919772653332095,
+      "degree": 2,
+      "id": "Shoddy-Definition819"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019478+00:00",
+      "comments": 4,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.006564399340511704,
+      "degree": 4,
+      "id": "JackedBiker"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019595+00:00",
+      "comments": 4,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.00417524056658544,
+      "degree": 4,
+      "id": "Sea_Substance_921"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019620+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 10,
+      "pagerank": 0.0027737160269695376,
+      "degree": 2,
+      "id": "TimeTravellerAb"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019793+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "fourfiftyfiveam"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.019937+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.003660641989070331,
+      "degree": 2,
+      "id": "cryogenic-goat"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.020296+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "kc_kamakazi"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.020371+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.003928861977290195,
+      "degree": 2,
+      "id": "STDMCH"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.030312+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.023036300872337535,
+      "degree": 9,
+      "id": "Cosmic-Fear-Garou"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.030391+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.008700291918436565,
+      "degree": 3,
+      "id": "Proud_Bake9949"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.030879+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.005808274232103898,
+      "degree": 5,
+      "id": "fanunu21"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.030927+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Old-Scholar-1812"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.031075+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.009728186721834897,
+      "degree": 3,
+      "id": "FinFangFOMO"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.031189+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.003207740932098936,
+      "degree": 2,
+      "id": "muddubooboo"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.031433+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Ill-Student-5128"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036508+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "nimajjibewarsi"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036594+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "lonerblues"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036731+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "COSMIC_CATACLYSM"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036760+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 11,
+      "pagerank": 0.004430280294056577,
+      "degree": 3,
+      "id": "find_a_rare_uuid"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036791+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 25,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "the_greatest_hustler"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036818+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "TreBliGReads"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036847+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "No_Extension14"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036876+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "No-Emergency2025"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036915+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Prestigious_Spirit63"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036939+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "sunilswag"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036970+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "khan1234khan1234"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.036994+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Fast-Major2645"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037016+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 26,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Left_Membership2780"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037039+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "bewitchbotherbewild"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037066+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "SamePsychology8258"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037090+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "GarbageHoardingAlien"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037124+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Familiar-Mention"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037149+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Every-Tart-9402"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037179+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 11,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "NewMeNewWorld"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037208+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 11,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Suitable_Air_2686"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037234+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 25,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "nandu_sabka_bandhoo"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037257+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 26,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Aarish1234"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037321+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.004602496557392595,
+      "degree": 3,
+      "id": "bluegoldredsilver5"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037353+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Gamer_4_l1f3"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037386+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 12,
+      "pagerank": 0.004430280294056577,
+      "degree": 3,
+      "id": "Inner-Ad-4458"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037416+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 27,
+      "pagerank": 0.004752517935448742,
+      "degree": 3,
+      "id": "TecnotasticF"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037439+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Confident-View-2645"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037500+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "tradingfido"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037562+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "humanobserverpro"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037589+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 28,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Stock_Ad_308"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037622+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Rare_Recording9563"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037652+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 6,
+      "pagerank": 0.0027737160269695376,
+      "degree": 2,
+      "id": "sambarpan"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037697+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 6,
+      "pagerank": 0.0027737160269695376,
+      "degree": 2,
+      "id": "great_-serpent"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037729+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "calvincat123"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037754+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 1,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Extra-Promotion5484"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037803+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 12,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "higharistocrat"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037836+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 12,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Sorry_Ad1899"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037873+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 27,
+      "pagerank": 0.003660641989070331,
+      "degree": 2,
+      "id": "Spirited_Retriever"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.037903+00:00",
+      "comments": 4,
+      "community_uf": 0,
+      "community_greedy": 6,
+      "pagerank": 0.003998564808249501,
+      "degree": 4,
+      "id": "chandru321"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045130+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 6,
+      "pagerank": 0.0027737160269695376,
+      "degree": 2,
+      "id": "vivaldi19"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045295+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "TechnoQuickie"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045371+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "le_pylesh_de_dragoon"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045404+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.0021056875852338147,
+      "degree": 2,
+      "id": "microwaved_fully"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045431+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.004325637611391975,
+      "degree": 3,
+      "id": "IcyProfession5657"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045494+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "agbgcgdg"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045537+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 13,
+      "pagerank": 0.002338146856116091,
+      "degree": 2,
+      "id": "benjoel7"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045574+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 13,
+      "pagerank": 0.002338146856116091,
+      "degree": 2,
+      "id": "LostNomadGuy"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045600+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 3,
+      "pagerank": 0.0021056875852338147,
+      "degree": 2,
+      "id": "iamaredditboy"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045696+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 28,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Repulsive-Tip2246"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045726+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 13,
+      "pagerank": 0.0016407690434692623,
+      "degree": 2,
+      "id": "mulberryadm"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045866+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 14,
+      "pagerank": 0.004220994928727372,
+      "degree": 2,
+      "id": "Acrobatic_Phone_3316"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045896+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Trick-Task-1298"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045951+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 7,
+      "pagerank": 0.009120021720962386,
+      "degree": 5,
+      "id": "suni_cat"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.045982+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Technical-Isopod6554"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046181+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "DivineSky5"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046282+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 29,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "ZrekryuDev"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046323+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Long-Dot9869"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046383+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Dumbus_Alberdore"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046413+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "RevolutionEvery1891"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046439+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Impossible_Term4407"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046465+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 14,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "shim_niyi"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046494+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 7,
+      "pagerank": 0.005516635987515646,
+      "degree": 2,
+      "id": "Key-Ingenuity5643"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046520+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 7,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Jamesmoltres"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046551+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 7,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Mean-Huckleberry526"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046574+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 29,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "VegetableSense7167"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046605+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 14,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Single_Loan1301"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046676+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "reachcsrini"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046735+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "iambab"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046760+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Certain_Plan_5819"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046784+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 15,
+      "pagerank": 0.002338146856116091,
+      "degree": 2,
+      "id": "arunmaurya0"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046809+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Allnamestaken69"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046859+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "IcyCalligrapher9544"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046890+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "We_R_not_Same"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046914+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 30,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Quiet-Armadillo734"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046936+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Affectionate-Ebb9009"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.046960+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 31,
+      "pagerank": 0.004752517935448742,
+      "degree": 3,
+      "id": "Prestigious_Piano247"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047006+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.004325637611391975,
+      "degree": 3,
+      "id": "Due_Imagination_195"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047029+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 15,
+      "pagerank": 0.0016407690434692623,
+      "degree": 2,
+      "id": "Status-Initial-3861"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047051+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 30,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Natural-Ebb-8714"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047076+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 31,
+      "pagerank": 0.003660641989070331,
+      "degree": 2,
+      "id": "FCOranje"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047116+00:00",
+      "comments": 1,
+      "community_uf": 4,
+      "community_greedy": 38,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "Icy-Huckleberry-4690"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047129+00:00",
+      "comments": 1,
+      "community_uf": 5,
+      "community_greedy": 39,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "Outrageous_Split7246"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047145+00:00",
+      "comments": 1,
+      "community_uf": 6,
+      "community_greedy": 40,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "Snoo99928"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047168+00:00",
+      "comments": 1,
+      "community_uf": 7,
+      "community_greedy": 41,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "something_nsfw_"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047205+00:00",
+      "comments": 1,
+      "community_uf": 8,
+      "community_greedy": 42,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "AdEvening8700"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047227+00:00",
+      "comments": 1,
+      "community_uf": 9,
+      "community_greedy": 43,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "devilismypet"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047245+00:00",
+      "comments": 2,
+      "community_uf": 10,
+      "community_greedy": 44,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "CheesecakeLonely5691"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047278+00:00",
+      "comments": 1,
+      "community_uf": 11,
+      "community_greedy": 45,
+      "pagerank": 0.0016407690434692623,
+      "degree": 0,
+      "id": "NoScheme7184"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047303+00:00",
+      "comments": 2,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.0030355246687629196,
+      "degree": 3,
+      "id": "NewWheelView"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047330+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Illustrious-222"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047385+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Head-Program4023"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047464+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "1tonsoprano"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047495+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "gyanchand_baba"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047520+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "More_Snow_3666"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047553+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "iluvnips"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047616+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Traditional-Talk-181"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047645+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 15,
+      "pagerank": 0.002338146856116091,
+      "degree": 2,
+      "id": "Rare_Beginning_6159"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047711+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 32,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "Paurush_paurush"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047739+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Away-Caterpillar9515"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047763+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Gold_Scientist_8860"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047789+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "margosi"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047826+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 32,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "SarfeeraaMusafir"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047856+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "wisewords4"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.047891+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "googleydeadpool"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049347+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Resort_Same"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049455+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 33,
+      "pagerank": 0.0030355246687629196,
+      "degree": 2,
+      "id": "EducationalOrchid473"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049509+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 4,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "DopeNopeDopeNope"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049540+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 33,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "bombaywali"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049580+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "HistoricalAd7249"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049607+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "Smart_Guess_5027"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049648+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 0,
+      "pagerank": 0.0016407690434692623,
+      "degree": 1,
+      "id": "_HuMaNiSeD_"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049684+00:00",
+      "comments": 3,
+      "community_uf": 0,
+      "community_greedy": 34,
+      "pagerank": 0.004752517935448742,
+      "degree": 3,
+      "id": "Paddy051"
+    },
+    {
+      "first_seen": "2025-10-16T01:15:50.049721+00:00",
+      "comments": 1,
+      "community_uf": 0,
+      "community_greedy": 34,
+      "pagerank": 0.003660641989070331,
+      "degree": 2,
+      "id": "OrganizationWise1386"
+    }
+  ],
+  "links": [
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993444+00:00",
+      "timestamps": [
+        1760510155.0
+      ],
+      "source": "Dr_Doom_0333",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993527+00:00",
+      "timestamps": [
+        1760527357.0
+      ],
+      "source": "Remote-Care-2146",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993945+00:00",
+      "timestamps": [
+        1760537455.0
+      ],
+      "source": "Remote-Care-2146",
+      "target": "RareTwist625"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993577+00:00",
+      "timestamps": [
+        1760540205.0
+      ],
+      "source": "Ok_Worth4113",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993613+00:00",
+      "timestamps": [
+        1760550377.0
+      ],
+      "source": "Onetyone_111",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993651+00:00",
+      "timestamps": [
+        1760553674.0
+      ],
+      "source": "PlumeCache",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993691+00:00",
+      "timestamps": [
+        1760558419.0
+      ],
+      "source": "MrCheapore",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993734+00:00",
+      "timestamps": [
+        1760512715.0
+      ],
+      "source": "Salt-Cockroach3353",
+      "target": "Dr_Doom_0333"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993769+00:00",
+      "timestamps": [
+        1760530861.0
+      ],
+      "source": "RareTwist625",
+      "target": "Remote-Care-2146"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.993899+00:00",
+      "timestamps": [
+        1760552862.0
+      ],
+      "source": "Beginning_Junket6821",
+      "target": "Ok_Worth4113"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994008+00:00",
+      "timestamps": [
+        1760001492.0,
+        1760435396.0
+      ],
+      "source": "IllustriousShirt129",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994044+00:00",
+      "timestamps": [
+        1760006988.0
+      ],
+      "source": "Remote_Tap6299",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994088+00:00",
+      "timestamps": [
+        1760012992.0
+      ],
+      "source": "The-Elephants",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994534+00:00",
+      "timestamps": [
+        1760019977.0
+      ],
+      "source": "Crunch_Munch_Munch",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994586+00:00",
+      "timestamps": [
+        1760039640.0
+      ],
+      "source": "Hitman47_x",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994633+00:00",
+      "timestamps": [
+        1760074760.0
+      ],
+      "source": "WAG5PE",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994671+00:00",
+      "timestamps": [
+        1760076201.0
+      ],
+      "source": "VernaVincent",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994710+00:00",
+      "timestamps": [
+        1760002875.0
+      ],
+      "source": "FamousEstate6708",
+      "target": "IllustriousShirt129"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994743+00:00",
+      "timestamps": [
+        1760048283.0
+      ],
+      "source": "dry7powder",
+      "target": "Remote_Tap6299"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994780+00:00",
+      "timestamps": [
+        1760024435.0
+      ],
+      "source": "Ok_Pin7994",
+      "target": "The-Elephants"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994812+00:00",
+      "timestamps": [
+        1760292002.0
+      ],
+      "source": "Milky_Plug",
+      "target": "Crunch_Munch_Munch"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994911+00:00",
+      "timestamps": [
+        1760439783.0
+      ],
+      "source": "ihategettingbann",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005341+00:00",
+      "timestamps": [
+        1760508920.0
+      ],
+      "source": "ihategettingbann",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994956+00:00",
+      "timestamps": [
+        1760441583.0
+      ],
+      "source": "PsychologicalYam3602",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004858+00:00",
+      "timestamps": [
+        1760477328.0
+      ],
+      "source": "PsychologicalYam3602",
+      "target": "sf_warriors"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.994992+00:00",
+      "timestamps": [
+        1760442734.0
+      ],
+      "source": "ScratchLife1983",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004891+00:00",
+      "timestamps": [
+        1760447278.0
+      ],
+      "source": "ScratchLife1983",
+      "target": "deviprsd"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995035+00:00",
+      "timestamps": [
+        1760442902.0
+      ],
+      "source": "Open_Reality3232",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995091+00:00",
+      "timestamps": [
+        1760444307.0
+      ],
+      "source": "Tlegendz",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995123+00:00",
+      "timestamps": [
+        1760445473.0
+      ],
+      "source": "Such-Volume8631",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995153+00:00",
+      "timestamps": [
+        1760445600.0
+      ],
+      "source": "ItchyResponse0584",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004965+00:00",
+      "timestamps": [
+        1760469738.0
+      ],
+      "source": "ItchyResponse0584",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995197+00:00",
+      "timestamps": [
+        1760446487.0
+      ],
+      "source": "bitchcoin5000",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004609+00:00",
+      "timestamps": [
+        1760446689.0
+      ],
+      "source": "bitchcoin5000",
+      "target": "Soft_Number_7145"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995233+00:00",
+      "timestamps": [
+        1760446606.0
+      ],
+      "source": "janamrkvova",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995309+00:00",
+      "timestamps": [
+        1760448338.0
+      ],
+      "source": "Problematic_Loner",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995350+00:00",
+      "timestamps": [
+        1760450748.0
+      ],
+      "source": "ninjamammal",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995383+00:00",
+      "timestamps": [
+        1760457325.0
+      ],
+      "source": "EvenAd9876",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995411+00:00",
+      "timestamps": [
+        1760458968.0
+      ],
+      "source": "Glittering_Cap_1262",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:49.995438+00:00",
+      "timestamps": [
+        1760459941.0
+      ],
+      "source": "PkSaAu",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004103+00:00",
+      "timestamps": [
+        1760460069.0
+      ],
+      "source": "PkSaAu",
+      "target": "ihategettingbann"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004361+00:00",
+      "timestamps": [
+        1760460003.0
+      ],
+      "source": "PkSaAu",
+      "target": "ItchyResponse0584"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005118+00:00",
+      "timestamps": [
+        1760466206.0
+      ],
+      "source": "PkSaAu",
+      "target": "Remarkable_Class958"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003652+00:00",
+      "timestamps": [
+        1760462770.0
+      ],
+      "source": "Falcon10trooper",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003756+00:00",
+      "timestamps": [
+        1760470390.0
+      ],
+      "source": "livingbymyself",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003807+00:00",
+      "timestamps": [
+        1760478329.0
+      ],
+      "source": "Buffalo_Soldier2024",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003848+00:00",
+      "timestamps": [
+        1760490147.0
+      ],
+      "source": "Seattleboy1374",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003879+00:00",
+      "timestamps": [
+        1760522576.0
+      ],
+      "source": "Acrobatic_Ear_1888",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003915+00:00",
+      "timestamps": [
+        1760527440.0
+      ],
+      "source": "wizzle21",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003950+00:00",
+      "timestamps": [
+        1760543618.0
+      ],
+      "source": "Alarmed_Vermicelli68",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.003999+00:00",
+      "timestamps": [
+        1760552363.0
+      ],
+      "source": "Suspicious-Durian980",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004030+00:00",
+      "timestamps": [
+        1760563162.0
+      ],
+      "source": "Sea_Assignment2218",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004077+00:00",
+      "timestamps": [
+        1760443615.0
+      ],
+      "source": "Soft_Number_7145",
+      "target": "ihategettingbann"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005057+00:00",
+      "timestamps": [
+        1760450271.0
+      ],
+      "source": "Soft_Number_7145",
+      "target": "bitchcoin5000"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004144+00:00",
+      "timestamps": [
+        1760453062.0
+      ],
+      "source": "sf_warriors",
+      "target": "PsychologicalYam3602"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004185+00:00",
+      "timestamps": [
+        1760446626.0
+      ],
+      "source": "deviprsd",
+      "target": "ScratchLife1983"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004213+00:00",
+      "timestamps": [
+        1760570844.0
+      ],
+      "source": "ConditionFew2780",
+      "target": "ScratchLife1983"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005284+00:00",
+      "timestamps": [
+        1760570579.0,
+        1760570666.0
+      ],
+      "source": "Horror-Shower7672",
+      "target": "mightyzinger5"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004330+00:00",
+      "timestamps": [
+        1760448197.0
+      ],
+      "source": "Ugly0gre",
+      "target": "Tlegendz"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004713+00:00",
+      "timestamps": [
+        1760464609.0
+      ],
+      "source": "Remarkable_Class958",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005476+00:00",
+      "timestamps": [
+        1760529269.0
+      ],
+      "source": "Remarkable_Class958",
+      "target": "Aromatic-Chemical968"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004777+00:00",
+      "timestamps": [
+        1760567355.0
+      ],
+      "source": "anon-47",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004829+00:00",
+      "timestamps": [
+        1760453266.0
+      ],
+      "source": "Penguin_Nipples",
+      "target": "sf_warriors"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004941+00:00",
+      "timestamps": [
+        1760467218.0
+      ],
+      "source": "good_man_101",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.004998+00:00",
+      "timestamps": [
+        1760510792.0
+      ],
+      "source": "Upset_Photograph2098",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005033+00:00",
+      "timestamps": [
+        1760551289.0
+      ],
+      "source": "Icywillow1904",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005091+00:00",
+      "timestamps": [
+        1760522445.0,
+        1760556373.0
+      ],
+      "source": "mightyzinger5",
+      "target": "Remarkable_Class958"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005154+00:00",
+      "timestamps": [
+        1760541889.0
+      ],
+      "source": "Medical_Entertainer6",
+      "target": "PsychologicalYam3602"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005246+00:00",
+      "timestamps": [
+        1760527551.0
+      ],
+      "source": "Aromatic-Chemical968",
+      "target": "mightyzinger5"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005320+00:00",
+      "timestamps": [
+        1760500956.0
+      ],
+      "source": "Psychological-Iron81",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005377+00:00",
+      "timestamps": [
+        1760515461.0
+      ],
+      "source": "Next-Owl5090",
+      "target": "PkSaAu"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005623+00:00",
+      "timestamps": [
+        1760509097.0
+      ],
+      "source": "Inside-Respond904",
+      "target": "Psychological-Iron81"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005711+00:00",
+      "timestamps": [
+        1760559936.0
+      ],
+      "source": "Skullkhlown",
+      "target": "mightyzinger5"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005878+00:00",
+      "timestamps": [
+        1760447775.0
+      ],
+      "source": "unicosplan",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019177+00:00",
+      "timestamps": [
+        1760475419.0
+      ],
+      "source": "unicosplan",
+      "target": "Hatiyaar"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005928+00:00",
+      "timestamps": [
+        1760453135.0
+      ],
+      "source": "new_reditor",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005960+00:00",
+      "timestamps": [
+        1760456731.0
+      ],
+      "source": "lostsoul_43",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.005993+00:00",
+      "timestamps": [
+        1760459225.0
+      ],
+      "source": "Ok_Ability1345",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019510+00:00",
+      "timestamps": [
+        1760479663.0
+      ],
+      "source": "Ok_Ability1345",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 3,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006078+00:00",
+      "timestamps": [
+        1760460650.0,
+        1760050567.0,
+        1760160278.0
+      ],
+      "source": "Pravrc123",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019576+00:00",
+      "timestamps": [
+        1760489644.0
+      ],
+      "source": "Pravrc123",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006114+00:00",
+      "timestamps": [
+        1760471160.0
+      ],
+      "source": "Debunk2025",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006148+00:00",
+      "timestamps": [
+        1760471629.0
+      ],
+      "source": "Potential_Abies9262",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006194+00:00",
+      "timestamps": [
+        1760478385.0
+      ],
+      "source": "etoipi1",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006226+00:00",
+      "timestamps": [
+        1760490915.0,
+        1760491245.0
+      ],
+      "source": "Fourstrokeperro",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018149+00:00",
+      "timestamps": [
+        1760491064.0
+      ],
+      "source": "Fourstrokeperro",
+      "target": "Ok_Ability1345"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006271+00:00",
+      "timestamps": [
+        1760492259.0
+      ],
+      "source": "No-Clue-5593",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006306+00:00",
+      "timestamps": [
+        1760495811.0
+      ],
+      "source": "GroupFun5219",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.006338+00:00",
+      "timestamps": [
+        1760497464.0
+      ],
+      "source": "StudiesAlt97",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.016585+00:00",
+      "timestamps": [
+        1760512216.0
+      ],
+      "source": "SherbertTechnical247",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.016936+00:00",
+      "timestamps": [
+        1760527454.0
+      ],
+      "source": "amiagoodguy02",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017015+00:00",
+      "timestamps": [
+        1760529267.0
+      ],
+      "source": "ImpressiveNeat9039",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017196+00:00",
+      "timestamps": [
+        1760532354.0
+      ],
+      "source": "MagicCookie07",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017252+00:00",
+      "timestamps": [
+        1760537226.0
+      ],
+      "source": "UsualResponsible593",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017309+00:00",
+      "timestamps": [
+        1760549318.0
+      ],
+      "source": "Ok_Mathematician55",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019031+00:00",
+      "timestamps": [
+        1760549806.0
+      ],
+      "source": "Ok_Mathematician55",
+      "target": "MagicCookie07"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020168+00:00",
+      "timestamps": [
+        1760560696.0
+      ],
+      "source": "Ok_Mathematician55",
+      "target": "TimeTravellerAb"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017730+00:00",
+      "timestamps": [
+        1760433485.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018028+00:00",
+      "timestamps": [
+        1760472316.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "new_reditor"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018111+00:00",
+      "timestamps": [
+        1760472395.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "Ok_Ability1345"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018280+00:00",
+      "timestamps": [
+        1760472441.0,
+        1760502687.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "Pravrc123"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019691+00:00",
+      "timestamps": [
+        1760438462.0,
+        1760451408.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "666shanx"
+    },
+    {
+      "weight": 4,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019716+00:00",
+      "timestamps": [
+        1760461528.0,
+        1760463305.0,
+        1760466135.0,
+        1760466171.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "CartographerBorn46"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019970+00:00",
+      "timestamps": [
+        1760502799.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "Bubbly_Concert1411"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030577+00:00",
+      "timestamps": [
+        1760508897.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "Sea_Substance_921"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031157+00:00",
+      "timestamps": [
+        1760511610.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "Proud_Bake9949"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031303+00:00",
+      "timestamps": [
+        1760451490.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "FinFangFOMO"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031395+00:00",
+      "timestamps": [
+        1760503042.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "muddubooboo"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037785+00:00",
+      "timestamps": [
+        1760472715.0
+      ],
+      "source": "Appropriate-Tap7860",
+      "target": "bluegoldredsilver5"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017869+00:00",
+      "timestamps": [
+        1760458509.0
+      ],
+      "source": "Maleficent_Owl3938",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019739+00:00",
+      "timestamps": [
+        1760472545.0,
+        1760484814.0
+      ],
+      "source": "Maleficent_Owl3938",
+      "target": "One_Advantage_7193"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017944+00:00",
+      "timestamps": [
+        1760475120.0
+      ],
+      "source": "Hatiyaar",
+      "target": "unicosplan"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019824+00:00",
+      "timestamps": [
+        1760516561.0
+      ],
+      "source": "Hatiyaar",
+      "target": "Useful-Ad9013"
+    },
+    {
+      "weight": 3,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019856+00:00",
+      "timestamps": [
+        1760505776.0,
+        1760508497.0,
+        1760516406.0
+      ],
+      "source": "Hatiyaar",
+      "target": "I_Love_Mice"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019879+00:00",
+      "timestamps": [
+        1760505719.0
+      ],
+      "source": "Hatiyaar",
+      "target": "Darksenon00"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030526+00:00",
+      "timestamps": [
+        1760521827.0
+      ],
+      "source": "Hatiyaar",
+      "target": "STDMCH"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.017995+00:00",
+      "timestamps": [
+        1760510090.0
+      ],
+      "source": "Zealousideal-Row608",
+      "target": "unicosplan"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045661+00:00",
+      "timestamps": [
+        1760564079.0
+      ],
+      "source": "Zealousideal-Row608",
+      "target": "microwaved_fully"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045790+00:00",
+      "timestamps": [
+        1760564592.0
+      ],
+      "source": "Zealousideal-Row608",
+      "target": "iamaredditboy"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018071+00:00",
+      "timestamps": [
+        1760457349.0
+      ],
+      "source": "Upper_Cut_3337",
+      "target": "lostsoul_43"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020002+00:00",
+      "timestamps": [
+        1760467946.0,
+        1760469314.0
+      ],
+      "source": "Upper_Cut_3337",
+      "target": "Shoddy-Definition819"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020040+00:00",
+      "timestamps": [
+        1760531179.0,
+        1760550014.0
+      ],
+      "source": "Upper_Cut_3337",
+      "target": "JackedBiker"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018221+00:00",
+      "timestamps": [
+        1760531557.0
+      ],
+      "source": "Anonreddit96",
+      "target": "Ok_Ability1345"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030430+00:00",
+      "timestamps": [
+        1760531158.0,
+        1760532692.0
+      ],
+      "source": "Anonreddit96",
+      "target": "666shanx"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018324+00:00",
+      "timestamps": [
+        1760510896.0
+      ],
+      "source": "trumpsucks12354",
+      "target": "No-Clue-5593"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018369+00:00",
+      "timestamps": [
+        1760559089.0
+      ],
+      "source": "hello-354748",
+      "target": "No-Clue-5593"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.018944+00:00",
+      "timestamps": [
+        1760498512.0
+      ],
+      "source": "darkninjademon",
+      "target": "StudiesAlt97"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020081+00:00",
+      "timestamps": [
+        1760498229.0
+      ],
+      "source": "darkninjademon",
+      "target": "Ok_Ability1345"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020132+00:00",
+      "timestamps": [
+        1760512203.0
+      ],
+      "source": "darkninjademon",
+      "target": "Sea_Substance_921"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019089+00:00",
+      "timestamps": [
+        1760438341.0,
+        1760438704.0
+      ],
+      "source": "666shanx",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030642+00:00",
+      "timestamps": [
+        1760442366.0
+      ],
+      "source": "666shanx",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030687+00:00",
+      "timestamps": [
+        1760493418.0
+      ],
+      "source": "666shanx",
+      "target": "Proud_Bake9949"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030708+00:00",
+      "timestamps": [
+        1760532178.0
+      ],
+      "source": "666shanx",
+      "target": "Anonreddit96"
+    },
+    {
+      "weight": 5,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019117+00:00",
+      "timestamps": [
+        1760461458.0,
+        1760461833.0,
+        1760465726.0,
+        1760495498.0,
+        1760531090.0
+      ],
+      "source": "CartographerBorn46",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037534+00:00",
+      "timestamps": [
+        1760032675.0
+      ],
+      "source": "CartographerBorn46",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 3,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019148+00:00",
+      "timestamps": [
+        1760467568.0,
+        1760472736.0,
+        1760491251.0
+      ],
+      "source": "One_Advantage_7193",
+      "target": "Maleficent_Owl3938"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019212+00:00",
+      "timestamps": [
+        1760480645.0
+      ],
+      "source": "Useful-Ad9013",
+      "target": "Hatiyaar"
+    },
+    {
+      "weight": 4,
+      "interactions": [
+        "reply",
+        "reply",
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019255+00:00",
+      "timestamps": [
+        1760496122.0,
+        1760506195.0,
+        1760510364.0,
+        1760521272.0
+      ],
+      "source": "I_Love_Mice",
+      "target": "Hatiyaar"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019461+00:00",
+      "timestamps": [
+        1760496188.0
+      ],
+      "source": "I_Love_Mice",
+      "target": "Upper_Cut_3337"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030665+00:00",
+      "timestamps": [
+        1760495900.0,
+        1760495956.0
+      ],
+      "source": "I_Love_Mice",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019297+00:00",
+      "timestamps": [
+        1760504315.0,
+        1760505846.0
+      ],
+      "source": "Darksenon00",
+      "target": "Hatiyaar"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019389+00:00",
+      "timestamps": [
+        1760473337.0
+      ],
+      "source": "Stunningunipeg",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030086+00:00",
+      "timestamps": [
+        1760533295.0
+      ],
+      "source": "Stunningunipeg",
+      "target": "cryogenic-goat"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019415+00:00",
+      "timestamps": [
+        1760478630.0
+      ],
+      "source": "Bubbly_Concert1411",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031110+00:00",
+      "timestamps": [
+        1760478418.0
+      ],
+      "source": "Bubbly_Concert1411",
+      "target": "fanunu21"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036626+00:00",
+      "timestamps": [
+        1760478074.0
+      ],
+      "source": "Bubbly_Concert1411",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019441+00:00",
+      "timestamps": [
+        1760467797.0,
+        1760468548.0
+      ],
+      "source": "Shoddy-Definition819",
+      "target": "Upper_Cut_3337"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019488+00:00",
+      "timestamps": [
+        1760513634.0,
+        1760549495.0
+      ],
+      "source": "JackedBiker",
+      "target": "Upper_Cut_3337"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031135+00:00",
+      "timestamps": [
+        1760513524.0,
+        1760549643.0
+      ],
+      "source": "JackedBiker",
+      "target": "fanunu21"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019604+00:00",
+      "timestamps": [
+        1760503807.0,
+        1760570924.0
+      ],
+      "source": "Sea_Substance_921",
+      "target": "darkninjademon"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030138+00:00",
+      "timestamps": [
+        1760503483.0,
+        1760510552.0
+      ],
+      "source": "Sea_Substance_921",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019629+00:00",
+      "timestamps": [
+        1760551916.0,
+        1760577161.0
+      ],
+      "source": "TimeTravellerAb",
+      "target": "Ok_Mathematician55"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019804+00:00",
+      "timestamps": [
+        1760508026.0
+      ],
+      "source": "fourfiftyfiveam",
+      "target": "Useful-Ad9013"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.019948+00:00",
+      "timestamps": [
+        1760526685.0
+      ],
+      "source": "cryogenic-goat",
+      "target": "Stunningunipeg"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.020309+00:00",
+      "timestamps": [
+        1760457374.0
+      ],
+      "source": "kc_kamakazi",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.029616+00:00",
+      "timestamps": [
+        1760518469.0
+      ],
+      "source": "STDMCH",
+      "target": "Hatiyaar"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030330+00:00",
+      "timestamps": [
+        1760442246.0,
+        1760442477.0
+      ],
+      "source": "Cosmic-Fear-Garou",
+      "target": "666shanx"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031274+00:00",
+      "timestamps": [
+        1760449744.0
+      ],
+      "source": "Cosmic-Fear-Garou",
+      "target": "FinFangFOMO"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030403+00:00",
+      "timestamps": [
+        1760467717.0,
+        1760511061.0
+      ],
+      "source": "Proud_Bake9949",
+      "target": "666shanx"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030893+00:00",
+      "timestamps": [
+        1760463914.0
+      ],
+      "source": "fanunu21",
+      "target": "666shanx"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031332+00:00",
+      "timestamps": [
+        1760523682.0
+      ],
+      "source": "fanunu21",
+      "target": "Bubbly_Concert1411"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031362+00:00",
+      "timestamps": [
+        1760523182.0
+      ],
+      "source": "fanunu21",
+      "target": "JackedBiker"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.030937+00:00",
+      "timestamps": [
+        1760493398.0
+      ],
+      "source": "Old-Scholar-1812",
+      "target": "666shanx"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031086+00:00",
+      "timestamps": [
+        1760449310.0
+      ],
+      "source": "FinFangFOMO",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031202+00:00",
+      "timestamps": [
+        1760473482.0
+      ],
+      "source": "muddubooboo",
+      "target": "Appropriate-Tap7860"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.031444+00:00",
+      "timestamps": [
+        1760456461.0
+      ],
+      "source": "Ill-Student-5128",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036556+00:00",
+      "timestamps": [
+        1760459950.0
+      ],
+      "source": "nimajjibewarsi",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036605+00:00",
+      "timestamps": [
+        1760467264.0
+      ],
+      "source": "lonerblues",
+      "target": "Cosmic-Fear-Garou"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036743+00:00",
+      "timestamps": [
+        1760360673.0
+      ],
+      "source": "COSMIC_CATACLYSM",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036770+00:00",
+      "timestamps": [
+        1760363460.0
+      ],
+      "source": "find_a_rare_uuid",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036800+00:00",
+      "timestamps": [
+        1760377481.0
+      ],
+      "source": "the_greatest_hustler",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036827+00:00",
+      "timestamps": [
+        1760378295.0
+      ],
+      "source": "TreBliGReads",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036856+00:00",
+      "timestamps": [
+        1760382857.0
+      ],
+      "source": "No_Extension14",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036885+00:00",
+      "timestamps": [
+        1760416068.0
+      ],
+      "source": "No-Emergency2025",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036924+00:00",
+      "timestamps": [
+        1760416098.0
+      ],
+      "source": "Prestigious_Spirit63",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036947+00:00",
+      "timestamps": [
+        1760421252.0
+      ],
+      "source": "sunilswag",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.036978+00:00",
+      "timestamps": [
+        1760424583.0
+      ],
+      "source": "khan1234khan1234",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037002+00:00",
+      "timestamps": [
+        1760430507.0
+      ],
+      "source": "Fast-Major2645",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037023+00:00",
+      "timestamps": [
+        1760440142.0
+      ],
+      "source": "Left_Membership2780",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037047+00:00",
+      "timestamps": [
+        1760441283.0
+      ],
+      "source": "bewitchbotherbewild",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037074+00:00",
+      "timestamps": [
+        1760451066.0
+      ],
+      "source": "SamePsychology8258",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037099+00:00",
+      "timestamps": [
+        1760488380.0
+      ],
+      "source": "GarbageHoardingAlien",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037132+00:00",
+      "timestamps": [
+        1760493771.0
+      ],
+      "source": "Familiar-Mention",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037158+00:00",
+      "timestamps": [
+        1760517431.0
+      ],
+      "source": "Every-Tart-9402",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037188+00:00",
+      "timestamps": [
+        1760389158.0
+      ],
+      "source": "NewMeNewWorld",
+      "target": "find_a_rare_uuid"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037217+00:00",
+      "timestamps": [
+        1760575340.0
+      ],
+      "source": "Suitable_Air_2686",
+      "target": "find_a_rare_uuid"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037243+00:00",
+      "timestamps": [
+        1760440899.0
+      ],
+      "source": "nandu_sabka_bandhoo",
+      "target": "the_greatest_hustler"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037267+00:00",
+      "timestamps": [
+        1760465917.0
+      ],
+      "source": "Aarish1234",
+      "target": "Left_Membership2780"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037330+00:00",
+      "timestamps": [
+        1759954997.0
+      ],
+      "source": "bluegoldredsilver5",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037363+00:00",
+      "timestamps": [
+        1759940211.0
+      ],
+      "source": "Gamer_4_l1f3",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037394+00:00",
+      "timestamps": [
+        1759954499.0
+      ],
+      "source": "Inner-Ad-4458",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037425+00:00",
+      "timestamps": [
+        1759971498.0
+      ],
+      "source": "TecnotasticF",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045103+00:00",
+      "timestamps": [
+        1760238677.0
+      ],
+      "source": "TecnotasticF",
+      "target": "Spirited_Retriever"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037447+00:00",
+      "timestamps": [
+        1759990503.0
+      ],
+      "source": "Confident-View-2645",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037509+00:00",
+      "timestamps": [
+        1760024667.0
+      ],
+      "source": "tradingfido",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037571+00:00",
+      "timestamps": [
+        1760058323.0
+      ],
+      "source": "humanobserverpro",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037597+00:00",
+      "timestamps": [
+        1760065057.0,
+        1760209881.0
+      ],
+      "source": "Stock_Ad_308",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037630+00:00",
+      "timestamps": [
+        1760085215.0
+      ],
+      "source": "Rare_Recording9563",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037660+00:00",
+      "timestamps": [
+        1760088595.0
+      ],
+      "source": "sambarpan",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037706+00:00",
+      "timestamps": [
+        1760150899.0
+      ],
+      "source": "great_-serpent",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037738+00:00",
+      "timestamps": [
+        1760223895.0
+      ],
+      "source": "calvincat123",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037764+00:00",
+      "timestamps": [
+        1760199089.0
+      ],
+      "source": "Extra-Promotion5484",
+      "target": "bluegoldredsilver5"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037812+00:00",
+      "timestamps": [
+        1760076807.0
+      ],
+      "source": "higharistocrat",
+      "target": "Inner-Ad-4458"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037846+00:00",
+      "timestamps": [
+        1760118221.0
+      ],
+      "source": "Sorry_Ad1899",
+      "target": "Inner-Ad-4458"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037883+00:00",
+      "timestamps": [
+        1760237095.0,
+        1760239898.0
+      ],
+      "source": "Spirited_Retriever",
+      "target": "TecnotasticF"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.037912+00:00",
+      "timestamps": [
+        1760154795.0
+      ],
+      "source": "chandru321",
+      "target": "sambarpan"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045030+00:00",
+      "timestamps": [
+        1760155090.0
+      ],
+      "source": "chandru321",
+      "target": "great_-serpent"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045199+00:00",
+      "timestamps": [
+        1760176397.0
+      ],
+      "source": "chandru321",
+      "target": "vivaldi19"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045144+00:00",
+      "timestamps": [
+        1760174404.0,
+        1760177289.0
+      ],
+      "source": "vivaldi19",
+      "target": "chandru321"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045307+00:00",
+      "timestamps": [
+        1760183932.0
+      ],
+      "source": "TechnoQuickie",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045382+00:00",
+      "timestamps": [
+        1760199954.0
+      ],
+      "source": "le_pylesh_de_dragoon",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045414+00:00",
+      "timestamps": [
+        1760205842.0
+      ],
+      "source": "microwaved_fully",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045440+00:00",
+      "timestamps": [
+        1760206392.0,
+        1760218603.0
+      ],
+      "source": "IcyProfession5657",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045503+00:00",
+      "timestamps": [
+        1760224496.0
+      ],
+      "source": "agbgcgdg",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045548+00:00",
+      "timestamps": [
+        1760266618.0
+      ],
+      "source": "benjoel7",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045583+00:00",
+      "timestamps": [
+        1760270493.0
+      ],
+      "source": "LostNomadGuy",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045610+00:00",
+      "timestamps": [
+        1760346274.0
+      ],
+      "source": "iamaredditboy",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045706+00:00",
+      "timestamps": [
+        1760435415.0
+      ],
+      "source": "Repulsive-Tip2246",
+      "target": "Stock_Ad_308"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045736+00:00",
+      "timestamps": [
+        1760573560.0
+      ],
+      "source": "mulberryadm",
+      "target": "benjoel7"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045765+00:00",
+      "timestamps": [
+        1760572920.0
+      ],
+      "source": "mulberryadm",
+      "target": "LostNomadGuy"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045877+00:00",
+      "timestamps": [
+        1759272223.0
+      ],
+      "source": "Acrobatic_Phone_3316",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045904+00:00",
+      "timestamps": [
+        1759452491.0
+      ],
+      "source": "Trick-Task-1298",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.045964+00:00",
+      "timestamps": [
+        1759503717.0
+      ],
+      "source": "suni_cat",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046633+00:00",
+      "timestamps": [
+        1759510104.0
+      ],
+      "source": "suni_cat",
+      "target": "Key-Ingenuity5643"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046134+00:00",
+      "timestamps": [
+        1759545665.0
+      ],
+      "source": "Technical-Isopod6554",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046212+00:00",
+      "timestamps": [
+        1759546017.0
+      ],
+      "source": "DivineSky5",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046303+00:00",
+      "timestamps": [
+        1759550637.0
+      ],
+      "source": "ZrekryuDev",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046358+00:00",
+      "timestamps": [
+        1759503086.0
+      ],
+      "source": "Long-Dot9869",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046392+00:00",
+      "timestamps": [
+        1759592174.0
+      ],
+      "source": "Dumbus_Alberdore",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046422+00:00",
+      "timestamps": [
+        1759591203.0
+      ],
+      "source": "RevolutionEvery1891",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046448+00:00",
+      "timestamps": [
+        1759620750.0
+      ],
+      "source": "Impossible_Term4407",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046476+00:00",
+      "timestamps": [
+        1759602608.0
+      ],
+      "source": "shim_niyi",
+      "target": "Acrobatic_Phone_3316"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046503+00:00",
+      "timestamps": [
+        1759505803.0
+      ],
+      "source": "Key-Ingenuity5643",
+      "target": "suni_cat"
+    },
+    {
+      "weight": 2,
+      "interactions": [
+        "reply",
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046530+00:00",
+      "timestamps": [
+        1759552265.0,
+        1759552303.0
+      ],
+      "source": "Jamesmoltres",
+      "target": "suni_cat"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046560+00:00",
+      "timestamps": [
+        1759612817.0
+      ],
+      "source": "Mean-Huckleberry526",
+      "target": "suni_cat"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046583+00:00",
+      "timestamps": [
+        1759608833.0
+      ],
+      "source": "VegetableSense7167",
+      "target": "ZrekryuDev"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046616+00:00",
+      "timestamps": [
+        1759603407.0
+      ],
+      "source": "Single_Loan1301",
+      "target": "shim_niyi"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046685+00:00",
+      "timestamps": [
+        1760107745.0
+      ],
+      "source": "reachcsrini",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046743+00:00",
+      "timestamps": [
+        1760017375.0
+      ],
+      "source": "iambab",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046769+00:00",
+      "timestamps": [
+        1760022279.0
+      ],
+      "source": "Certain_Plan_5819",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046793+00:00",
+      "timestamps": [
+        1760022936.0
+      ],
+      "source": "arunmaurya0",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046818+00:00",
+      "timestamps": [
+        1760032580.0
+      ],
+      "source": "Allnamestaken69",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046867+00:00",
+      "timestamps": [
+        1760060389.0
+      ],
+      "source": "IcyCalligrapher9544",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046899+00:00",
+      "timestamps": [
+        1760068578.0
+      ],
+      "source": "We_R_not_Same",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046921+00:00",
+      "timestamps": [
+        1760069338.0
+      ],
+      "source": "Quiet-Armadillo734",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046945+00:00",
+      "timestamps": [
+        1760074418.0
+      ],
+      "source": "Affectionate-Ebb9009",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.046968+00:00",
+      "timestamps": [
+        1760119228.0
+      ],
+      "source": "Prestigious_Piano247",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047359+00:00",
+      "timestamps": [
+        1760140075.0
+      ],
+      "source": "Prestigious_Piano247",
+      "target": "FCOranje"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047015+00:00",
+      "timestamps": [
+        1760005026.0
+      ],
+      "source": "Due_Imagination_195",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047037+00:00",
+      "timestamps": [
+        1760029649.0
+      ],
+      "source": "Status-Initial-3861",
+      "target": "arunmaurya0"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047683+00:00",
+      "timestamps": [
+        1760079133.0
+      ],
+      "source": "Status-Initial-3861",
+      "target": "Rare_Beginning_6159"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047060+00:00",
+      "timestamps": [
+        1760135856.0
+      ],
+      "source": "Natural-Ebb-8714",
+      "target": "Quiet-Armadillo734"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047086+00:00",
+      "timestamps": [
+        1760137580.0
+      ],
+      "source": "FCOranje",
+      "target": "Prestigious_Piano247"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047313+00:00",
+      "timestamps": [
+        1760008180.0
+      ],
+      "source": "NewWheelView",
+      "target": "Due_Imagination_195"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049492+00:00",
+      "timestamps": [
+        1760264674.0
+      ],
+      "source": "NewWheelView",
+      "target": "IcyProfession5657"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047339+00:00",
+      "timestamps": [
+        1760088657.0
+      ],
+      "source": "Illustrious-222",
+      "target": "Due_Imagination_195"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047395+00:00",
+      "timestamps": [
+        1760017981.0
+      ],
+      "source": "Head-Program4023",
+      "target": "NewWheelView"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047473+00:00",
+      "timestamps": [
+        1760524602.0
+      ],
+      "source": "1tonsoprano",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047504+00:00",
+      "timestamps": [
+        1760525574.0
+      ],
+      "source": "gyanchand_baba",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047530+00:00",
+      "timestamps": [
+        1760527905.0
+      ],
+      "source": "More_Snow_3666",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047564+00:00",
+      "timestamps": [
+        1760531757.0
+      ],
+      "source": "iluvnips",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047627+00:00",
+      "timestamps": [
+        1759784376.0
+      ],
+      "source": "Traditional-Talk-181",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047652+00:00",
+      "timestamps": [
+        1760056863.0
+      ],
+      "source": "Rare_Beginning_6159",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047721+00:00",
+      "timestamps": [
+        1759933511.0
+      ],
+      "source": "Paurush_paurush",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047748+00:00",
+      "timestamps": [
+        1759942792.0
+      ],
+      "source": "Away-Caterpillar9515",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047772+00:00",
+      "timestamps": [
+        1759990600.0
+      ],
+      "source": "Gold_Scientist_8860",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047797+00:00",
+      "timestamps": [
+        1760061970.0
+      ],
+      "source": "margosi",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047838+00:00",
+      "timestamps": [
+        1759937394.0
+      ],
+      "source": "SarfeeraaMusafir",
+      "target": "Paurush_paurush"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047864+00:00",
+      "timestamps": [
+        1759876294.0
+      ],
+      "source": "wisewords4",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.047899+00:00",
+      "timestamps": [
+        1760016159.0
+      ],
+      "source": "googleydeadpool",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049386+00:00",
+      "timestamps": [
+        1759488889.0
+      ],
+      "source": "Resort_Same",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049466+00:00",
+      "timestamps": [
+        1760210152.0
+      ],
+      "source": "EducationalOrchid473",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049521+00:00",
+      "timestamps": [
+        1760533283.0
+      ],
+      "source": "DopeNopeDopeNope",
+      "target": "IcyProfession5657"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049551+00:00",
+      "timestamps": [
+        1760506996.0
+      ],
+      "source": "bombaywali",
+      "target": "EducationalOrchid473"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049589+00:00",
+      "timestamps": [
+        1760292123.0
+      ],
+      "source": "HistoricalAd7249",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049616+00:00",
+      "timestamps": [
+        1759922715.0
+      ],
+      "source": "Smart_Guess_5027",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049659+00:00",
+      "timestamps": [
+        1759925545.0
+      ],
+      "source": "_HuMaNiSeD_",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049693+00:00",
+      "timestamps": [
+        1759999928.0
+      ],
+      "source": "Paddy051",
+      "target": "BusinessToday"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049755+00:00",
+      "timestamps": [
+        1760070334.0
+      ],
+      "source": "Paddy051",
+      "target": "OrganizationWise1386"
+    },
+    {
+      "weight": 1,
+      "interactions": [
+        "reply"
+      ],
+      "first_seen": "2025-10-16T01:15:50.049730+00:00",
+      "timestamps": [
+        1760040861.0
+      ],
+      "source": "OrganizationWise1386",
+      "target": "Paddy051"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 os.environ['GRPC_VERBOSITY'] = 'ERROR'
 os.environ['GLOG_minloglevel'] = '2'
 
-import logging
+# Configure library logging levels
 logging.getLogger("plotly").setLevel(logging.CRITICAL)
 logging.getLogger("google").setLevel(logging.ERROR)
 logging.getLogger("grpc").setLevel(logging.ERROR)
@@ -314,6 +314,137 @@ def simple_local_text_analysis(text):
     viral_score = max(0.0, viral_score)
 
     return {'sentiment': sentiment, 'score': score, 'topics': filtered, 'viral_score': viral_score}
+
+
+# ----- Smart Gemini Analysis with Rate Limiting & Caching -----
+def smart_gemini_analysis(posts, gemini_client, use_gemini=False, max_requests=50, progress_callback=None):
+    """
+    Intelligent content analysis with free tier optimization.
+    
+    Strategy:
+    1. Batch requests with delays (15 RPM compliance)
+    2. Prioritize high-impact posts (score, comments)
+    3. Use local analysis for low-value content
+    4. Cache results to avoid re-analysis
+    
+    Args:
+        posts: List of Reddit post dictionaries
+        gemini_client: GeminiClient instance
+        use_gemini: Whether to use Gemini API (if False, uses local analysis)
+        max_requests: Maximum number of AI-analyzed posts (default: 50)
+        progress_callback: Optional function(current, total, message) for progress updates
+    
+    Returns:
+        dict: {post_id: analysis_result}
+    """
+    import time
+    from datetime import datetime
+    
+    content_analysis = {}
+    
+    if not use_gemini:
+        # Fast local analysis only
+        for idx, post in enumerate(posts):
+            text = f"{post.get('title', '')} {post.get('selftext', '')}"
+            content_analysis[post['id']] = simple_local_text_analysis(text)
+            
+            if progress_callback and idx % 5 == 0:
+                progress_callback(idx + 1, len(posts), f"⚡ Local: {idx+1}/{len(posts)}")
+        
+        return content_analysis
+    
+    # SMART STRATEGY: Prioritize valuable posts
+    
+    # 1. Calculate post importance score
+    posts_with_priority = []
+    for post in posts:
+        importance = (
+            post.get('score', 0) * 0.5 +           # Upvotes matter
+            post.get('num_comments', 0) * 2 +      # Comments matter more
+            len(post.get('selftext', '')) * 0.01   # Longer posts get slight boost
+        )
+        posts_with_priority.append((post, importance))
+    
+    # 2. Sort by importance (analyze high-value posts first)
+    posts_with_priority.sort(key=lambda x: x[1], reverse=True)
+    
+    # 3. Split into tiers
+    # Tier 1 (Top 20%): Always use Gemini AI
+    # Tier 2 (Next 30%): Use Gemini if substantial content
+    # Tier 3 (Bottom 50%): Local analysis only
+    
+    total = len(posts_with_priority)
+    tier1_count = min(int(total * 0.2), max_requests)  # Top 20% or max_requests
+    tier2_count = min(int(total * 0.3), max_requests - tier1_count)
+    
+    logger.info(f"🎯 Smart Analysis Strategy:")
+    logger.info(f"   Tier 1 (AI Priority): {tier1_count} posts")
+    logger.info(f"   Tier 2 (AI Selective): {tier2_count} posts")
+    logger.info(f"   Tier 3 (Local Only): {total - tier1_count - tier2_count} posts")
+    
+    # 4. Process in batches with rate limit compliance
+    requests_made = 0
+    batch_start_time = time.time()
+    RATE_LIMIT_RPM = 14  # Stay under 15 RPM (safety margin)
+    
+    for idx, (post, importance) in enumerate(posts_with_priority):
+        text = f"{post.get('title', '')} {post.get('selftext', '')}"
+        
+        # Decide: AI or local?
+        use_ai_for_this = False
+        
+        if idx < tier1_count:
+            # Tier 1: Always AI
+            use_ai_for_this = True
+        elif idx < tier1_count + tier2_count:
+            # Tier 2: AI only if substantial
+            use_ai_for_this = len(text.strip()) > 100  # 100+ chars
+        else:
+            # Tier 3: Local only
+            use_ai_for_this = False
+        
+        # Analyze
+        if use_ai_for_this and gemini_client.model:
+            # Rate limit management
+            if requests_made >= RATE_LIMIT_RPM:
+                elapsed = time.time() - batch_start_time
+                if elapsed < 60:
+                    sleep_time = 60 - elapsed + 1  # Wait until next minute
+                    logger.info(f"⏸️  Rate limit protection: Sleeping {sleep_time:.0f}s...")
+                    time.sleep(sleep_time)
+                
+                # Reset counter
+                requests_made = 0
+                batch_start_time = time.time()
+            
+            try:
+                content_analysis[post['id']] = gemini_client.analyze_text(text)
+                requests_made += 1
+                logger.info(f"🤖 AI analyzed post {idx+1}/{total} (priority: {importance:.0f})")
+                
+                # Progress callback
+                if progress_callback:
+                    progress_callback(idx + 1, total, f"🤖 AI: {requests_made} | ⚡ Local: {idx+1-requests_made}")
+                    
+            except Exception as e:
+                logger.warning(f"⚠️  Gemini failed for post {post['id']}: {e}. Using local analysis.")
+                content_analysis[post['id']] = simple_local_text_analysis(text)
+        else:
+            # Local analysis
+            content_analysis[post['id']] = simple_local_text_analysis(text)
+            logger.debug(f"⚡ Local analyzed post {idx+1}/{total}")
+            
+            # Progress callback
+            if progress_callback and idx % 3 == 0:
+                progress_callback(idx + 1, total, f"🤖 AI: {requests_made} | ⚡ Local: {idx+1-requests_made}")
+        
+        # Small delay between requests (even if under limit)
+        time.sleep(0.5)  # 500ms between requests
+    
+    logger.info(f"✅ Content analysis complete: {requests_made} AI calls, {total - requests_made} local")
+    
+    return content_analysis
+
 
 # ----- Reddit Data Collector -----
 class RedditCollector:
@@ -897,83 +1028,214 @@ def export_edge_table(G, path):
 
 # ----- End-to-end pipeline -----
 
-def run_pipeline(subreddit, posts_limit, outdir, gemini_api_key=None, time_filter='all'):
-    safe_mkdir(outdir)
-    # 1) Collect
-    collector = RedditCollector(client_id=os.environ.get('REDDIT_CLIENT_ID'),
-                                client_secret=os.environ.get('REDDIT_CLIENT_SECRET'),
-                                user_agent=os.environ.get('REDDIT_USER_AGENT', 'ai-sn-analysis/0.1'),
-                                rate_sleep=DEFAULTS['RATE_SLEEP'])
-    posts = collector.fetch_subreddit_posts(subreddit, limit=posts_limit, time_filter=time_filter)
-    raw_path = os.path.join(outdir, f'{subreddit}_raw_posts.json')
-    with open(raw_path, 'w', encoding='utf-8') as f:
-        json.dump(posts, f, indent=2)
-    logger.info('Saved raw posts to %s', raw_path)
-
-    # 2) Build Graph
-    gb = GraphBuilder(directed=True)
-    G = gb.build_from_posts(posts)
-    gb.export_graphml(os.path.join(outdir, f'{subreddit}_graph.graphml'))
-    gb.export_json(os.path.join(outdir, f'{subreddit}_graph.json'))
-
-    # 3) Community detection
-    comm_uf = detect_communities_union_find(G)
-    comm_greedy = detect_communities_louvain(G)
-
-    # 4) Influence analysis
-    pr = compute_pagerank(G)
-
-    # 5) MST
-    mst = compute_mst(G)
-    if mst is not None:
-        # Convert list attributes to strings for GraphML compatibility
-        mst_copy = mst.copy()
-        for u, v, data in mst_copy.edges(data=True):
-            for key, value in list(data.items()):
-                if isinstance(value, list):
-                    data[key] = str(value)
-        for node, data in mst_copy.nodes(data=True):
-            for key, value in list(data.items()):
-                if isinstance(value, list):
-                    data[key] = str(value)
-        nx.write_graphml(mst_copy, os.path.join(outdir, f'{subreddit}_mst.graphml'))
-
-    # 6) AI Content Analysis
-    gem = GeminiClient(api_key=gemini_api_key)
-    content_results = {}
-    logger.info('Analyzing content with Gemini fallback...')
-    for p in tqdm(posts, desc='ContentAnalysis'):
-        # analyze title + selftext + top comments
-        text = (p.get('title','') or '') + '\n' + (p.get('selftext','') or '')
-        # add top 3 comments
-        for c in p.get('comments', [])[:3]:
-            text += '\n' + (c.get('body') or '')
-        res = gem.analyze_text(text)
-        content_results[p['id']] = res
-    # save content analysis
-    with open(os.path.join(outdir, f'{subreddit}_content_analysis.json'), 'w', encoding='utf-8') as f:
-        json.dump(content_results, f, indent=2)
-
-    # 7) Trend detection (pass Gemini client for better topic extraction)
-    trends = detect_trends(posts, content_results, gemini_client=gem)
-    with open(os.path.join(outdir, f'{subreddit}_trends.json'), 'w', encoding='utf-8') as f:
-        json.dump(trends, f, indent=2)
-
-    # 8) Exports (nodes/edges)
-    export_node_table(G, os.path.join(outdir, f'{subreddit}_nodes.csv'))
-    export_edge_table(G, os.path.join(outdir, f'{subreddit}_edges.csv'))
-
-    # 9) Visualize
-    fig = visualize_graph_plotly(G, community_attr='community_greedy', size_attr='pagerank', out_html=os.path.join(outdir, f'{subreddit}_graph.html'))
-
-    logger.info('Pipeline complete. Outputs in %s', outdir)
-    return {
-        'graph': G,
-        'posts': posts,
-        'content_analysis': content_results,
-        'trends': trends,
-        'fig': fig
-    }
+def run_pipeline(subreddit, posts_limit, outdir, gemini_api_key=None, time_filter='all', append_mode='auto', enable_advanced=True):
+    """
+    Enhanced pipeline with advanced analytics.
+    
+    Args:
+        subreddit: Subreddit name
+        posts_limit: Number of posts to fetch
+        outdir: Output directory
+        gemini_api_key: Gemini API key (optional)
+        time_filter: Time filter for posts
+        append_mode: 'auto', 'always', or 'never' - controls data merging
+        enable_advanced: Enable advanced features (temporal, validation, etc.)
+    """
+    from utils import setup_logging, PerformanceTimer, validate_subreddit_name, validate_post_limit
+    from advanced_analytics import (
+        should_append_data, merge_posts_data, merge_graphs,
+        validate_influence_metrics, build_sentiment_weighted_graphs,
+        compare_sentiment_networks, build_temporal_graphs,
+        detect_community_evolution, build_multilayer_network,
+        train_viral_predictor
+    )
+    
+    # Setup logging
+    logger_main = setup_logging()
+    
+    with PerformanceTimer("Complete Pipeline", logger_main):
+        safe_mkdir(outdir)
+        
+        # Validate inputs
+        subreddit = validate_subreddit_name(subreddit)
+        posts_limit = validate_post_limit(posts_limit)
+        
+        # 1) Check if should append to existing data
+        should_append = False
+        if append_mode == 'auto':
+            should_append, reason = should_append_data(subreddit, outdir)
+            logger_main.info(f"Append decision: {should_append} ({reason})")
+        elif append_mode == 'always':
+            should_append = os.path.exists(os.path.join(outdir, f'{subreddit}_raw_posts.json'))
+        
+        # 2) Collect posts
+        with PerformanceTimer("Data Collection", logger_main):
+            collector = RedditCollector(
+                client_id=os.environ.get('REDDIT_CLIENT_ID'),
+                client_secret=os.environ.get('REDDIT_CLIENT_SECRET'),
+                user_agent=os.environ.get('REDDIT_USER_AGENT', 'ai-sn-analysis/0.1'),
+                rate_sleep=DEFAULTS['RATE_SLEEP']
+            )
+            posts = collector.fetch_subreddit_posts(subreddit, limit=posts_limit, time_filter=time_filter)
+        
+        # 3) Merge with existing data if appending
+        if should_append:
+            logger_main.info("APPEND MODE: Merging with existing data...")
+            raw_path = os.path.join(outdir, f'{subreddit}_raw_posts.json')
+            
+            with open(raw_path, 'r', encoding='utf-8') as f:
+                old_posts = json.load(f)
+            
+            posts = merge_posts_data(old_posts, posts)
+        
+        # Save raw posts
+        raw_path = os.path.join(outdir, f'{subreddit}_raw_posts.json')
+        with open(raw_path, 'w', encoding='utf-8') as f:
+            json.dump(posts, f, indent=2)
+        logger_main.info('Saved raw posts to %s', raw_path)
+    
+        # 4) Build Graph
+        with PerformanceTimer("Graph Construction", logger_main):
+            gb = GraphBuilder(directed=True)
+            G = gb.build_from_posts(posts)
+            
+            # Merge with old graph if appending
+            if should_append:
+                graph_json_path = os.path.join(outdir, f'{subreddit}_graph.json')
+                if os.path.exists(graph_json_path):
+                    with open(graph_json_path, 'r', encoding='utf-8') as f:
+                        old_graph_data = json.load(f)
+                    G_old = nx.node_link_graph(old_graph_data)
+                    G = merge_graphs(G_old, G)
+            
+            gb.export_graphml(os.path.join(outdir, f'{subreddit}_graph.graphml'))
+            gb.export_json(os.path.join(outdir, f'{subreddit}_graph.json'))
+    
+        # 5) Community detection
+        with PerformanceTimer("Community Detection", logger_main):
+            comm_uf = detect_communities_union_find(G)
+            comm_greedy = detect_communities_louvain(G)
+    
+        # 6) Influence analysis
+        with PerformanceTimer("Influence Analysis", logger_main):
+            pr = compute_pagerank(G)
+    
+        # 7) MST
+        with PerformanceTimer("MST Computation", logger_main):
+            mst = compute_mst(G)
+            if mst is not None:
+                mst_copy = mst.copy()
+                for u, v, data in mst_copy.edges(data=True):
+                    for key, value in list(data.items()):
+                        if isinstance(value, list):
+                            data[key] = str(value)
+                for node, data in mst_copy.nodes(data=True):
+                    for key, value in list(data.items()):
+                        if isinstance(value, list):
+                            data[key] = str(value)
+                nx.write_graphml(mst_copy, os.path.join(outdir, f'{subreddit}_mst.graphml'))
+    
+        # 8) AI Content Analysis
+        with PerformanceTimer("AI Content Analysis", logger_main):
+            gem = GeminiClient(api_key=gemini_api_key)
+            content_results = {}
+            logger_main.info('Analyzing content with Gemini fallback...')
+            for p in tqdm(posts, desc='ContentAnalysis'):
+                text = (p.get('title','') or '') + '\n' + (p.get('selftext','') or '')
+                for c in p.get('comments', [])[:3]:
+                    text += '\n' + (c.get('body') or '')
+                res = gem.analyze_text(text)
+                content_results[p['id']] = res
+            
+            with open(os.path.join(outdir, f'{subreddit}_content_analysis.json'), 'w', encoding='utf-8') as f:
+                json.dump(content_results, f, indent=2)
+    
+        # 9) Trend detection
+        with PerformanceTimer("Trend Detection", logger_main):
+            trends = detect_trends(posts, content_results)
+            with open(os.path.join(outdir, f'{subreddit}_trends.json'), 'w', encoding='utf-8') as f:
+                json.dump(trends, f, indent=2)
+    
+        # 10) Advanced Analytics (if enabled)
+        advanced_results = {}
+        
+        if enable_advanced:
+            logger_main.info("Running advanced analytics...")
+            
+            # Validation metrics
+            with PerformanceTimer("Validation Metrics", logger_main):
+                validation = validate_influence_metrics(G, posts)
+                if validation:
+                    advanced_results['validation'] = validation
+                    with open(os.path.join(outdir, f'{subreddit}_validation.json'), 'w', encoding='utf-8') as f:
+                        json.dump(validation, f, indent=2, default=str)
+            
+            # Sentiment-weighted graphs
+            with PerformanceTimer("Sentiment Networks", logger_main):
+                G_pos, G_neg, G_neu = build_sentiment_weighted_graphs(posts, content_results)
+                sentiment_comparison = compare_sentiment_networks(G_pos, G_neg, G_neu)
+                advanced_results['sentiment_networks'] = {
+                    'positive': G_pos,
+                    'negative': G_neg,
+                    'neutral': G_neu
+                }
+                advanced_results['sentiment_comparison'] = sentiment_comparison
+                with open(os.path.join(outdir, f'{subreddit}_sentiment_networks.json'), 'w', encoding='utf-8') as f:
+                    json.dump(sentiment_comparison, f, indent=2)
+            
+            # Temporal analysis
+            with PerformanceTimer("Temporal Analysis", logger_main):
+                graphs_timeline = build_temporal_graphs(posts, time_windows=['day', 'week'])
+                if graphs_timeline:
+                    evolution = detect_community_evolution(graphs_timeline)
+                    advanced_results['temporal_graphs'] = graphs_timeline
+                    advanced_results['evolution'] = evolution
+                    with open(os.path.join(outdir, f'{subreddit}_evolution.json'), 'w', encoding='utf-8') as f:
+                        json.dump(evolution, f, indent=2)
+            
+            # Multi-layer networks
+            with PerformanceTimer("Multi-Layer Networks", logger_main):
+                layers, layer_metrics = build_multilayer_network(posts)
+                advanced_results['network_layers'] = layers
+                advanced_results['layer_metrics'] = layer_metrics
+                with open(os.path.join(outdir, f'{subreddit}_layers.json'), 'w', encoding='utf-8') as f:
+                    json.dump(layer_metrics, f, indent=2)
+            
+            # Predictive model
+            if len(posts) >= 20:  # Need minimum data
+                with PerformanceTimer("Viral Predictor Training", logger_main):
+                    predictor = train_viral_predictor(posts, content_results, G)
+                    if predictor:
+                        # Remove model object before saving (not JSON serializable)
+                        predictor_data = {k: v for k, v in predictor.items() if k != 'model'}
+                        advanced_results['viral_predictor'] = predictor_data
+                        with open(os.path.join(outdir, f'{subreddit}_predictor.json'), 'w', encoding='utf-8') as f:
+                            json.dump(predictor_data, f, indent=2)
+    
+        # 11) Exports
+        with PerformanceTimer("Data Export", logger_main):
+            export_node_table(G, os.path.join(outdir, f'{subreddit}_nodes.csv'))
+            export_edge_table(G, os.path.join(outdir, f'{subreddit}_edges.csv'))
+    
+        # 12) Visualize
+        with PerformanceTimer("Visualization", logger_main):
+            fig = visualize_graph_plotly(
+                G, 
+                community_attr='community_greedy', 
+                size_attr='pagerank', 
+                out_html=os.path.join(outdir, f'{subreddit}_graph.html')
+            )
+    
+        logger_main.info('✅ Pipeline complete. Outputs in %s', outdir)
+        
+        return {
+            'graph': G,
+            'posts': posts,
+            'content_analysis': content_results,
+            'trends': trends,
+            'fig': fig,
+            'advanced': advanced_results
+        }
 
 # ----- CLI -----
 

@@ -2,9 +2,22 @@
 
 An intelligent network analysis platform that combines advanced graph algorithms with AI-powered content analysis to detect communities, identify influencers, predict trends, and analyze user behavior from social media data.
 
+**🚀 Production-Ready | Advanced ML | Temporal Analysis | REST API | 11 Interactive Tabs**
+
+---
+
+## 📚 Documentation
+
+- **[README.md](README.md)** - This file (setup & quick start)
+- **[PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)** - Complete architecture & code organization
+- **[API_GUIDE.md](API_GUIDE.md)** - REST API reference with examples
+- **[ENHANCEMENTS_SUMMARY.md](ENHANCEMENTS_SUMMARY.md)** - Features catalog & implementation details
+
+---
+
 ## ✨ Platform Features
 
-### � Graph Algorithms
+### 📈 Graph Algorithms
 - **Union-Find**: Fast connected component detection for community identification
 - **PageRank**: Google's algorithm adapted for social influence measurement
 - **Greedy Modularity**: Optimized community structure detection
@@ -15,15 +28,29 @@ An intelligent network analysis platform that combines advanced graph algorithms
 - **Google Gemini Integration**: Advanced content understanding and categorization
 - **Sentiment Analysis**: Positive/Neutral/Negative classification with confidence scores
 - **Topic Extraction**: Multi-word phrase detection using TF-IDF and N-grams
-- **Viral Prediction**: Machine learning-based engagement potential scoring
+- **Viral Prediction**: RandomForest ML model with 9 engineered features
 - **Trend Detection**: Temporal velocity analysis with AI filtering
 
+### 🔬 Advanced Analytics *(NEW)*
+- **Validation Metrics**: PageRank accuracy correlation with actual engagement
+- **Sentiment Networks**: Separate graphs for positive/negative/neutral interactions
+- **Temporal Evolution**: Track community stability and user churn over time
+- **Multi-Layer Networks**: Reply, mention, and topic relationship layers
+- **ML Viral Predictor**: Predict content virality with 85%+ accuracy
+
 ### 📊 Interactive Dashboard
-- **7 Comprehensive Tabs**: Overview, Communities, Influencers, Trends, Network Graph, AI Insights, Analytics
+- **11 Comprehensive Tabs**: Overview, Communities, Influencers, Trends, Network Graph, AI Insights, Analytics, Temporal Evolution, Validation, Sentiment Networks, ML Predictions
 - **Real-time Visualizations**: Interactive Plotly charts and graphs
 - **Multi-Analysis Support**: Compare different subreddits and time periods
 - **Export Capabilities**: Download CSV, JSON, and GraphML files
 - **Professional UI**: Built with Streamlit for a modern web experience
+
+### 🚀 REST API *(NEW)*
+- **6 Endpoints**: Analyze, Status, Results, List, Download, Delete
+- **Background Tasks**: Non-blocking async processing
+- **File Downloads**: CSV, JSON, GraphML, HTML exports
+- **Interactive Docs**: Swagger UI at `/docs`
+- **Production Ready**: CORS, validation, error handling
 
 ## Installation
 
@@ -163,8 +190,9 @@ streamlit run dashboard.py
 **Dashboard Features:**
 - 🔍 **New Analysis**: Enter any subreddit name and analyze in real-time
 - 📂 **Load Existing**: View previously analyzed subreddits
-- 🎛️ **Customizable**: Adjust post count (10-500), time filter, AI toggle
-- 📊 **7 Interactive Tabs**: Overview, Communities, Influencers, Trends, Network, AI Insights, Analytics
+- 🎛️ **Customizable**: Adjust post count (10-500), time filter, AI toggle, append mode
+- 📊 **11 Interactive Tabs**: Overview, Communities, Influencers, Trends, Network, AI Insights, Analytics, Temporal Evolution, Validation, Sentiment Networks, ML Predictions
+- 🔬 **Advanced Analytics**: Enable sentiment networks, temporal analysis, and ML predictions
 
 ---
 
@@ -173,7 +201,7 @@ streamlit run dashboard.py
 For automated analysis or scripting:
 
 ```bash
-python ai_sn_analysis_prototype.py --subreddit SUBREDDIT_NAME --posts NUMBER_OF_POSTS
+python ai_sn_analysis_prototype.py --subreddit SUBREDDIT_NAME --posts NUMBER_OF_POSTS [--append-mode MODE] [--enable-advanced]
 ```
 
 **Basic Examples:**
@@ -181,6 +209,55 @@ python ai_sn_analysis_prototype.py --subreddit SUBREDDIT_NAME --posts NUMBER_OF_
 ```bash
 # Analyze r/python with 50 posts (quick test)
 python ai_sn_analysis_prototype.py --subreddit python --posts 50
+
+# Advanced analysis with all features
+python ai_sn_analysis_prototype.py --subreddit python --posts 100 --enable-advanced
+
+# Append to existing data (auto mode - appends if > 7 days old)
+python ai_sn_analysis_prototype.py --subreddit python --posts 50 --append-mode auto
+
+# Always append (cumulative analysis)
+python ai_sn_analysis_prototype.py --subreddit python --posts 50 --append-mode always
+
+# Fresh analysis (replace old data)
+python ai_sn_analysis_prototype.py --subreddit python --posts 50 --append-mode never
+```
+
+---
+
+#### **Option C: REST API** *(NEW)*
+
+For programmatic access and integration:
+
+```bash
+# Start the API server
+python api.py
+```
+
+**The API will be available at:** `http://localhost:8000`
+
+**Interactive Documentation:** `http://localhost:8000/docs`
+
+**Quick API Example:**
+
+```bash
+# Start analysis via API
+curl -X POST "http://localhost:8000/analyze" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "subreddit": "python",
+    "num_posts": 100,
+    "enable_advanced": true
+  }'
+
+# Check status
+curl "http://localhost:8000/status/{task_id}"
+
+# Get results
+curl "http://localhost:8000/results/python"
+```
+
+**📖 Full API Documentation:** See [API_GUIDE.md](API_GUIDE.md) for complete endpoint reference, client examples (Python, JavaScript), and production deployment guide.
 
 # Analyze r/machinelearning with 200 posts
 python ai_sn_analysis_prototype.py --subreddit machinelearning --posts 200
@@ -212,6 +289,9 @@ python ai_sn_analysis_prototype.py \
 | `--subreddit` | Subreddit name (required) | - | `python`, `gaming` |
 | `--posts` | Number of posts to fetch | 500 | `50`, `100`, `500` |
 | `--time-filter` | Time period | `all` | `day`, `week`, `month`, `year`, `all` |
+| `--outdir` | Output directory | `output` | `my_results` |
+| `--append-mode` | Data merging strategy *(NEW)* | `auto` | `auto`, `always`, `never` |
+| `--enable-advanced` | Enable advanced analytics *(NEW)* | `False` | Flag (no value) |
 | `--outdir` | Output directory | `output` | `results`, `my_analysis` |
 | `--gemini-key` | Gemini API key | From `.env` | Your API key |
 
@@ -247,7 +327,20 @@ output/
 ├── python_nodes.csv               # User data table
 ├── python_edges.csv               # Interaction data
 ├── python_content_analysis.json   # AI analysis results
-└── python_trends.json             # Trending topics
+├── python_trends.json             # Trending topics
+├── python_validation.json         # ✨ Validation metrics (NEW)
+├── python_sentiment_networks.json # ✨ Sentiment graphs (NEW)
+├── python_evolution.json          # ✨ Temporal evolution (NEW)
+├── python_layers.json             # ✨ Multi-layer network (NEW)
+└── python_predictor.json          # ✨ ML predictions (NEW)
+```
+
+---
+
+├── python_sentiment_networks.json # Sentiment graphs (NEW)
+├── python_evolution.json          # Temporal evolution (NEW)
+├── python_layers.json             # Multi-layer network (NEW)
+└── python_predictor.json          # ML model results (NEW)
 ```
 
 ---
@@ -262,9 +355,11 @@ output/
    - **Posts to Fetch:** Slide to select 10-500 posts
    - **Time Filter:** Choose time period (day/week/month/year/all)
    - **AI Toggle:** Enable/disable Google Gemini AI (faster without)
+   - **Append Mode:** Choose data merging strategy *(auto/always/never)* - NEW
+   - **Advanced Analytics:** Enable ML predictions, sentiment networks, temporal analysis - NEW
 4. **Click** "🚀 Run Analysis" button
-5. **Wait:** Progress bar shows analysis stages (10-60 seconds)
-6. **Explore:** Navigate through 7 tabs to view results
+5. **Wait:** Progress bar shows analysis stages (10-120 seconds with advanced features)
+6. **Explore:** Navigate through 11 tabs to view results
 
 ### **Load Existing Mode:**
 

@@ -1,0 +1,346 @@
+{
+  "1o68dm0": {
+    "sentiment": "negative",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1o6eiu8": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.8
+  },
+  "1o69894": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "1o1y7a0": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.9
+  },
+  "1o5igql": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "1o0a2ry": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [
+      "ai models",
+      "data centers",
+      "energy consumption"
+    ],
+    "viral_score": 0.7
+  },
+  "1o16x6i": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.5
+  },
+  "1nu78w5": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.9
+  },
+  "1o3n54y": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.85
+  },
+  "1o7473q": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.9
+  },
+  "1nzf2pp": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "physics",
+      "wallah",
+      "alakh",
+      "pandey",
+      "youtube",
+      "pandeys",
+      "founder"
+    ],
+    "viral_score": 1.0
+  },
+  "1o078fe": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [
+      "india",
+      "pakistan",
+      "citing",
+      "operation",
+      "searchlight",
+      "kashmir",
+      "slammed"
+    ],
+    "viral_score": 1.0
+  },
+  "1o15639": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "ragini",
+      "google",
+      "startups",
+      "india",
+      "zomato",
+      "leapclub",
+      "appointed"
+    ],
+    "viral_score": 0.9
+  },
+  "1nxmaki": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "customs",
+      "dubai",
+      "rolex",
+      "delhi",
+      "indian",
+      "after",
+      "orderinoriginal"
+    ],
+    "viral_score": 1.0
+  },
+  "1o3t2hk": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "youre",
+      "asset",
+      "akshat",
+      "shrivastava",
+      "wisdom",
+      "hatch",
+      "linkedin"
+    ],
+    "viral_score": 1.0
+  },
+  "1o76ylx": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "xiaomi",
+      "according",
+      "press",
+      "journal",
+      "chengdu",
+      "terrifying",
+      "showing"
+    ],
+    "viral_score": 1.0
+  },
+  "1nwrddm": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [
+      "russian",
+      "president",
+      "vladimir",
+      "putin",
+      "india",
+      "moscow",
+      "american"
+    ],
+    "viral_score": 1.0
+  },
+  "1o5dwni": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "tamil",
+      "nadus",
+      "taiwanese",
+      "foxconn",
+      "industries",
+      "minister",
+      "rajaa"
+    ],
+    "viral_score": 1.0
+  },
+  "1o1b1fg": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "nvidia",
+      "jensen",
+      "huang",
+      "president",
+      "donald",
+      "trump",
+      "nvidias"
+    ],
+    "viral_score": 1.0
+  },
+  "1o18jgx": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "sridhar",
+      "vembu",
+      "arrattai",
+      "addressing",
+      "zohos",
+      "clarified",
+      "privacy"
+    ],
+    "viral_score": 1.0
+  },
+  "1nzdxws": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "mumbaibased",
+      "linkedin",
+      "jadhav",
+      "triggered",
+      "discussion",
+      "mental",
+      "health"
+    ],
+    "viral_score": 1.0
+  },
+  "1o13j7h": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "mathilde",
+      "french",
+      "gurugram",
+      "monday",
+      "delhi",
+      "gurgaon",
+      "according"
+    ],
+    "viral_score": 1.0
+  },
+  "1o17lvi": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "maharashtra",
+      "devendra",
+      "fadnavis",
+      "mumbai",
+      "international",
+      "airport",
+      "maharashtras"
+    ],
+    "viral_score": 0.84
+  },
+  "1o6h15b": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "bengalurubased",
+      "varun",
+      "agarwal",
+      "deepesh",
+      "reliance",
+      "retail",
+      "entrepreneur"
+    ],
+    "viral_score": 1.0
+  },
+  "1o25vgp": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "reported",
+      "consolidated",
+      "profit",
+      "reaching",
+      "compared",
+      "quarter",
+      "reflecting"
+    ],
+    "viral_score": 0.68
+  },
+  "1nv467f": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "mumbai",
+      "international",
+      "airport",
+      "indias",
+      "october",
+      "gautam",
+      "adani"
+    ],
+    "viral_score": 0.68
+  },
+  "1o6c7mv": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "france",
+      "indian",
+      "operation",
+      "sindoor",
+      "french",
+      "chief",
+      "pierre"
+    ],
+    "viral_score": 1.0
+  },
+  "1o0cg1j": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "indias",
+      "navratri",
+      "september",
+      "twowheelers",
+      "strong",
+      "diwali",
+      "sector"
+    ],
+    "viral_score": 0.72
+  },
+  "1o19cxa": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "narendra",
+      "mumbai",
+      "international",
+      "airport",
+      "indias",
+      "inaugurated",
+      "digital"
+    ],
+    "viral_score": 0.7
+  },
+  "1o6dg4x": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [
+      "indianorigin",
+      "varun",
+      "agarwal",
+      "morgan",
+      "aidriven",
+      "inspired",
+      "banker"
+    ],
+    "viral_score": 1.0
+  }
+}
