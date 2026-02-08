@@ -1,0 +1,430 @@
+{
+  "1m1g8cj": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "1m3k9rh": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1hvvnwa": {
+    "sentiment": "negative",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1fc139n": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "1mcjtor": {
+    "sentiment": "negative",
+    "score": 0.15,
+    "topics": [
+      "gate",
+      "full stack development"
+    ],
+    "viral_score": 0.6
+  },
+  "1kn4zq8": {
+    "sentiment": "positive",
+    "score": 0.7,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "1mkvbn1": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "1es14dr": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1577bht": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1n9zqwm": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "operations research",
+      "data analytics",
+      "algorithms"
+    ],
+    "viral_score": 0.7
+  },
+  "1kokxt7": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "1l9cxnk": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "relate",
+      "mentality",
+      "coaching",
+      "institute",
+      "forced",
+      "making",
+      "revenue"
+    ],
+    "viral_score": 0.4
+  },
+  "1hxjjlx": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "procrastination",
+      "destroying"
+    ],
+    "viral_score": 0.08
+  },
+  "1lhx19l": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "unbeatable"
+    ],
+    "viral_score": 0.02
+  },
+  "1lztvyd": {
+    "sentiment": "positive",
+    "score": 0.7857142857142857,
+    "topics": [
+      "bottom",
+      "kanpur",
+      "journey",
+      "hangs",
+      "august",
+      "failed",
+      "mains"
+    ],
+    "viral_score": 1.0
+  },
+  "1gh4ko2": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1kjdzxy": {
+    "sentiment": "positive",
+    "score": 0.9285714285714286,
+    "topics": [
+      "delhi",
+      "somewhere",
+      "chandni",
+      "chowk",
+      "chinese",
+      "mujhse",
+      "scored"
+    ],
+    "viral_score": 1.0
+  },
+  "1iaipyn": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "1kpg3bl": {
+    "sentiment": "positive",
+    "score": 0.95,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "1m3jy48": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "1l5h28b": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "1lg84k4": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.5
+  },
+  "1ku3nc3": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "m.tech"
+    ],
+    "viral_score": 0.1
+  },
+  "1m0fl1i": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.8
+  },
+  "1fmad8r": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [
+      "cpu instructions",
+      "memory addressing",
+      "computer architecture"
+    ],
+    "viral_score": 0.75
+  },
+  "1lhtebu": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1nrtssd": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1jexako": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.8
+  },
+  "1ns3wna": {
+    "sentiment": "negative",
+    "score": 0.1,
+    "topics": [],
+    "viral_score": 0.05
+  },
+  "1ln7dh4": {
+    "sentiment": "positive",
+    "score": 0.2,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1n5gput": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1kwk5h7": {
+    "sentiment": "positive",
+    "score": 0.95,
+    "topics": [],
+    "viral_score": 0.65
+  },
+  "1c1koqr": {
+    "sentiment": "negative",
+    "score": 0.05,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "1np91q2": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1dcfql4": {
+    "sentiment": "negative",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "1cwb5cu": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1ic7xm6": {
+    "sentiment": "neutral",
+    "score": 0.55,
+    "topics": [
+      "gate",
+      "paper analysis"
+    ],
+    "viral_score": 0.05
+  },
+  "1ioiyv8": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "journey",
+      "regrets",
+      "anymore",
+      "journey guys",
+      "regrets anymore"
+    ],
+    "viral_score": 0.18
+  },
+  "1jghq6t": {
+    "sentiment": "positive",
+    "score": 0.875,
+    "topics": [
+      "yasir",
+      "qualifier",
+      "jumped",
+      "youtube",
+      "electronics",
+      "communication",
+      "engineering"
+    ],
+    "viral_score": 1.0
+  },
+  "1n7zvvz": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "risks"
+    ],
+    "viral_score": 0.02
+  },
+  "1k2942j": {
+    "sentiment": "positive",
+    "score": 0.875,
+    "topics": [
+      "crossroad",
+      "college",
+      "placements",
+      "students",
+      "recently",
+      "mstat",
+      "experience"
+    ],
+    "viral_score": 1.0
+  },
+  "1jevomj": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "bhidle",
+      "student",
+      "questions",
+      "normalisation",
+      "confidence",
+      "aaja bhidle",
+      "student given"
+    ],
+    "viral_score": 0.9
+  },
+  "1l3reww": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "mtech",
+      "below tier",
+      "btech 10xx",
+      "10xx rank",
+      "gate(gen male",
+      "mtech ra/ms",
+      "made it🤓☝️.uwu"
+    ],
+    "viral_score": 0.74
+  },
+  "1kwmzcz": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "dream",
+      "excited",
+      "scoring",
+      "getting",
+      "writing",
+      "experiences",
+      "launching"
+    ],
+    "viral_score": 1.0
+  },
+  "1iaa18a": {
+    "sentiment": "positive",
+    "score": 0.875,
+    "topics": [
+      "mtech",
+      "thats",
+      "india",
+      "microsoft",
+      "seattle",
+      "there",
+      "cognizant"
+    ],
+    "viral_score": 1.0
+  },
+  "1nikzee": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [
+      "chusi",
+      "megasheet",
+      "subjects",
+      "interviews",
+      "coaching",
+      "individual",
+      "teacher"
+    ],
+    "viral_score": 1.0
+  },
+  "1hu8neg": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "trust",
+      "truth",
+      "study",
+      "hours",
+      "whenever",
+      "tests",
+      "course"
+    ],
+    "viral_score": 1.0
+  },
+  "159yqes": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "everyone",
+      "ggwp everyone"
+    ],
+    "viral_score": 0.04
+  },
+  "1kjx1o5": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "kharagpur",
+      "interview",
+      "kharagpur interview",
+      "interview done"
+    ],
+    "viral_score": 0.1
+  },
+  "1mmkjhu": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "median",
+      "computer science engineering"
+    ],
+    "viral_score": 0.1
+  }
+}

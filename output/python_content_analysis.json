@@ -1,0 +1,516 @@
+{
+  "g53lxf": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "alexa",
+      "voice recordings",
+      "automation"
+    ],
+    "viral_score": 0.85
+  },
+  "hoolsm": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "web scraping",
+      "rate limiting",
+      "reddit api"
+    ],
+    "viral_score": 0.95
+  },
+  "gftejm": {
+    "sentiment": "positive",
+    "score": 0.95,
+    "topics": [],
+    "viral_score": 0.75
+  },
+  "7kpme8": {
+    "sentiment": "neutral",
+    "score": 0.55,
+    "topics": [
+      "machine learning",
+      "tinder algorithm",
+      "automation"
+    ],
+    "viral_score": 0.3
+  },
+  "irh8l0": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "gn9add": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "evolutionary algorithms",
+      "github",
+      "pypi",
+      "requirements.txt",
+      "pipfile"
+    ],
+    "viral_score": 0.7
+  },
+  "hqc7ol": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "neural network",
+      "pyglet",
+      "numpy",
+      "evolutionary algorithm",
+      "animation",
+      "github"
+    ],
+    "viral_score": 0.7
+  },
+  "ghxqod": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "drawing algorithm",
+      "algorithm optimization",
+      "github"
+    ],
+    "viral_score": 0.6
+  },
+  "iehths": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "debugging",
+      "rubber duck debugging",
+      "equality vs assignment"
+    ],
+    "viral_score": 0.1
+  },
+  "dg0etx": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "orbital mechanics",
+      "3 body problem"
+    ],
+    "viral_score": 0.8
+  },
+  "gbko3e": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "data visualization",
+      "matplotlib"
+    ],
+    "viral_score": 0.75
+  },
+  "hmoabi": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "matplotlib",
+      "github",
+      "data visualization"
+    ],
+    "viral_score": 0.6
+  },
+  "hpr28u": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "eye tracker",
+      "open source",
+      "data structures and algorithms",
+      "git",
+      "modular design"
+    ],
+    "viral_score": 0.7
+  },
+  "7jti46": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "vba",
+      "excel integration"
+    ],
+    "viral_score": 0.9
+  },
+  "gzila7": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [
+      "generators",
+      "list comprehensions",
+      "f-strings",
+      "with statements",
+      "args kwargs",
+      "list unpacking",
+      "try except finally"
+    ],
+    "viral_score": 0.3
+  },
+  "f55076": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "3d scanner",
+      "android",
+      "arduino",
+      "tcp",
+      "wifi",
+      "3d reconstruction"
+    ],
+    "viral_score": 0.85
+  },
+  "ga7y7f": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [
+      "api",
+      "audio automation",
+      "media player control"
+    ],
+    "viral_score": 0.7
+  },
+  "hg9sk8": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "indentation",
+      "tabs",
+      "spaces"
+    ],
+    "viral_score": 0.85
+  },
+  "cmdbuf": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [
+      "matlab",
+      "python",
+      "licensing cost"
+    ],
+    "viral_score": 0.75
+  },
+  "fjqoxv": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [],
+    "viral_score": 0.5
+  },
+  "fr5561": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [
+      "command line",
+      "git"
+    ],
+    "viral_score": 0.6
+  },
+  "7mwgtw": {
+    "sentiment": "negative",
+    "score": 0.35,
+    "topics": [
+      "dunders",
+      "decorators",
+      "generators",
+      "sys/os variables",
+      "time formatting",
+      "os.path",
+      "built-ins"
+    ],
+    "viral_score": 0.7
+  },
+  "gs7xdb": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "python gui",
+      "github"
+    ],
+    "viral_score": 0.7
+  },
+  "goldxf": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "ocr",
+      "tesseract engine",
+      "image to text"
+    ],
+    "viral_score": 0.7
+  },
+  "f35yg0": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "tesseract",
+      "scrapy",
+      "flask"
+    ],
+    "viral_score": 0.2
+  },
+  "hu4umj": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "selenium",
+      "blender",
+      "slack"
+    ],
+    "viral_score": 0.15
+  },
+  "jui7zw": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "prettyerrors",
+      "exception reports",
+      "pip",
+      "vscode",
+      "github"
+    ],
+    "viral_score": 0.75
+  },
+  "gvnyx5": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "epicycles",
+      "fourier analysis",
+      "edge detection"
+    ],
+    "viral_score": 0.3
+  },
+  "hrvxrd": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "object-oriented programming",
+      "type system",
+      "object identity",
+      "literals"
+    ],
+    "viral_score": 0.6
+  },
+  "er9q4h": {
+    "sentiment": "positive",
+    "score": 0.7,
+    "topics": [
+      "gesture recognition"
+    ],
+    "viral_score": 0.2
+  },
+  "gjlcyp": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "minimax search",
+      "mcts",
+      "gui",
+      "github"
+    ],
+    "viral_score": 0.7
+  },
+  "iwt09a": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "self driving car",
+      "github",
+      "machine learning"
+    ],
+    "viral_score": 0.1
+  },
+  "g5bbss": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "handwriting simulation",
+      "kerning",
+      "word wrapping",
+      "text layout"
+    ],
+    "viral_score": 0.4
+  },
+  "glzol8": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "arduino",
+      "dominant color values",
+      "open source"
+    ],
+    "viral_score": 0.85
+  },
+  "isbjm4": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "j5a2ih": {
+    "sentiment": "positive",
+    "score": 0.7,
+    "topics": [
+      "perl",
+      "windows",
+      "environment variables",
+      "command prompt",
+      "msi installer"
+    ],
+    "viral_score": 0.15
+  },
+  "1434dxo": {
+    "sentiment": "negative",
+    "score": 0.75,
+    "topics": [
+      "reddit api",
+      "pushshift"
+    ],
+    "viral_score": 0.3
+  },
+  "ggt5ld": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "pygame",
+      "game development",
+      "fluid simulation",
+      "game performance",
+      "open source",
+      "devlogs"
+    ],
+    "viral_score": 0.75
+  },
+  "izspe0": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [
+      "deepfakes",
+      "instagram bot",
+      "image animation",
+      "face detection",
+      "numpy"
+    ],
+    "viral_score": 0.7
+  },
+  "i9q4dx": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "ray tracing",
+      "path tracing",
+      "refraction",
+      "thin film interference",
+      "textures",
+      "camera lens"
+    ],
+    "viral_score": 0.7
+  },
+  "iiamfv": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "praw",
+      "github",
+      "reddit api",
+      "automation",
+      "scripting"
+    ],
+    "viral_score": 0.95
+  },
+  "h9bfe4": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [
+      "facial recognition",
+      "opencv",
+      "applescript",
+      "face detection"
+    ],
+    "viral_score": 0.7
+  },
+  "hnknw0": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "green screen",
+      "computer vision",
+      "image processing",
+      "real-time video"
+    ],
+    "viral_score": 0.7
+  },
+  "63dkmq": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.8
+  },
+  "itzn13": {
+    "sentiment": "neutral",
+    "score": 0.7,
+    "topics": [
+      "semver",
+      "internal vm",
+      "pep 20",
+      "data science"
+    ],
+    "viral_score": 0.2
+  },
+  "e2234a": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "hv2vds": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "data science",
+      "web scraping",
+      "pandas",
+      "numpy",
+      "itertools",
+      "machine learning"
+    ],
+    "viral_score": 0.8
+  },
+  "j3hq21": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [
+      "recursion",
+      "image processing",
+      "animation"
+    ],
+    "viral_score": 0.75
+  },
+  "j2ai2r": {
+    "sentiment": "negative",
+    "score": 0.6,
+    "topics": [
+      "deepfake",
+      "instagram bot",
+      "github",
+      "instagram api",
+      "hosting"
+    ],
+    "viral_score": 0.65
+  },
+  "hb108j": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "ray tracing",
+      "general relativity",
+      "einstein's field equations",
+      "curved spacetime",
+      "black hole simulation",
+      "border radius"
+    ],
+    "viral_score": 0.85
+  }
+}

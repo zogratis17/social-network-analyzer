@@ -1,0 +1,19 @@
+{
+  "validation_data": [
+    {
+      "user": "BusinessToday",
+      "pagerank": 0.24754020626057588,
+      "avg_upvotes": 63.733333333333334,
+      "avg_comments": 12.4,
+      "total_posts": 30,
+      "actual_influence": 76.13333333333334
+    }
+  ],
+  "correlations": {
+    "pagerank_vs_upvotes": NaN,
+    "pagerank_vs_comments": NaN,
+    "pagerank_vs_combined": NaN
+  },
+  "accuracy": "Low",
+  "sample_size": 1
+}

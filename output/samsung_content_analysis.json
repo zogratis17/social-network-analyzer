@@ -1,0 +1,369 @@
+{
+  "1e0davb": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.5
+  },
+  "kx8ev3": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "driowt": {
+    "sentiment": "neutral",
+    "score": 0.6,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "1n38hfw": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.9
+  },
+  "f88f8x": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.05
+  },
+  "i4j2wz": {
+    "sentiment": "negative",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "iqt9wx": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "iux1j3": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "fu7ibn": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "1nto7oo": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.8
+  },
+  "1jskh7j": {
+    "sentiment": "negative",
+    "score": 0.6,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "jj53nz": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "jq9f15": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.0
+  },
+  "d2ppo5": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "l72cns": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "kl4rrg": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "moderation bot",
+      "link analysis",
+      "content moderation"
+    ],
+    "viral_score": 0.15
+  },
+  "f6xi38": {
+    "sentiment": "negative",
+    "score": 0.75,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "hmkrja": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "ik7vfp": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "apple pay",
+      "nfc payments",
+      "mobile payment"
+    ],
+    "viral_score": 0.8
+  },
+  "lghfdk": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "il203z": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [
+      "samsung pay"
+    ],
+    "viral_score": 0.7
+  },
+  "1i6vhfw": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [
+      "faceid",
+      "swiftkey",
+      "user interface",
+      "gesture control",
+      "keyboard behavior",
+      "app management"
+    ],
+    "viral_score": 0.5
+  },
+  "cnehvc": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "hrmrrr": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "thoughts"
+    ],
+    "viral_score": 0.02
+  },
+  "gor07e": {
+    "sentiment": "positive",
+    "score": 0.7,
+    "topics": [],
+    "viral_score": 0.5
+  },
+  "l7u90m": {
+    "sentiment": "negative",
+    "score": 0.8,
+    "topics": [],
+    "viral_score": 0.75
+  },
+  "l6linb": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "cywefo": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "exbehg": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "1iiym94": {
+    "sentiment": "negative",
+    "score": 0.05,
+    "topics": [
+      "clipboard management",
+      "split-screen support",
+      "navigation gestures",
+      "pro camera controls",
+      "raw image processing",
+      "file transfers",
+      "itunes"
+    ],
+    "viral_score": 0.8
+  },
+  "k61p9k": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "fgu3i0": {
+    "sentiment": "positive",
+    "score": 0.98,
+    "topics": [],
+    "viral_score": 0.15
+  },
+  "gzns9h": {
+    "sentiment": "negative",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "m858de": {
+    "sentiment": "negative",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.9
+  },
+  "dvftbh": {
+    "sentiment": "positive",
+    "score": 0.95,
+    "topics": [],
+    "viral_score": 0.4
+  },
+  "f4puph": {
+    "sentiment": "positive",
+    "score": 0.8,
+    "topics": [
+      "s20 ultra"
+    ],
+    "viral_score": 0.3
+  },
+  "1ljs7k7": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.1
+  },
+  "iwkc2l": {
+    "sentiment": "positive",
+    "score": 0.7,
+    "topics": [],
+    "viral_score": 0.6
+  },
+  "i5qk03": {
+    "sentiment": "positive",
+    "score": 0.9,
+    "topics": [],
+    "viral_score": 0.7
+  },
+  "dzoxx2": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "bixby"
+    ],
+    "viral_score": 0.04
+  },
+  "1f1byel": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.02
+  },
+  "lkamfn": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "galaxy",
+      "drop your",
+      "your galaxy",
+      "galaxy bean"
+    ],
+    "viral_score": 0.12
+  },
+  "f9mxm1": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.02
+  },
+  "inkv8d": {
+    "sentiment": "positive",
+    "score": 0.85,
+    "topics": [],
+    "viral_score": 0.3
+  },
+  "ks5vz3": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [],
+    "viral_score": 0.2
+  },
+  "gdaiif": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "samsung",
+      "upgraded",
+      "iphone",
+      "stoked",
+      "joining",
+      "family",
+      "samsung family"
+    ],
+    "viral_score": 0.34
+  },
+  "1kywe7t": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "samsung",
+      "because",
+      "alright",
+      "shocked",
+      "doctors",
+      "likely",
+      "broken"
+    ],
+    "viral_score": 1.0
+  },
+  "lhzd5x": {
+    "sentiment": "neutral",
+    "score": 0.5,
+    "topics": [
+      "update",
+      "properly",
+      "being properly",
+      "properly used"
+    ],
+    "viral_score": 0.16
+  },
+  "i470a2": {
+    "sentiment": "neutral",
+    "score": 0.5833333333333334,
+    "topics": [
+      "seriously",
+      "paying",
+      "samsung",
+      "apple",
+      "ultra",
+      "whats",
+      "exynos"
+    ],
+    "viral_score": 1.0
+  },
+  "i8t7hf": {
+    "sentiment": "positive",
+    "score": 0.75,
+    "topics": [
+      "teardown"
+    ],
+    "viral_score": 0.8
+  }
+}
